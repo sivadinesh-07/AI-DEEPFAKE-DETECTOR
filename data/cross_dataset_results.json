@@ -1,0 +1,19 @@
+{
+  "dataset": "UADFV",
+  "samples_evaluated": 10,
+  "accuracy": 50.0,
+  "precision": 50.0,
+  "recall": 100.0,
+  "f1_score": 66.67,
+  "roc_auc": 0.76,
+  "confusion_matrix": [
+    [
+      0,
+      5
+    ],
+    [
+      0,
+      5
+    ]
+  ]
+}

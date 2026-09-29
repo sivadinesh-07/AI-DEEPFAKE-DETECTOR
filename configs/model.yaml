@@ -1,0 +1,60 @@
+models:
+  spatial:
+    backbone: "efficientnet_b4"
+    pretrained: true
+    feature_dim: 1792
+    spectral_dim: 64
+    dropout: 0.3
+
+  temporal:
+    type: "bilstm"
+    input_dim: 1856  # 1792 (spatial) + 64 (spectral)
+    hidden_dim: 256
+    num_layers: 2
+    bidirectional: true
+    dropout: 0.3
+    output_dim: 512  # 256 * 2
+
+  behavioral:
+    ear_dim: 1       # Eye Aspect Ratio
+    mar_dim: 1       # Mouth Aspect Ratio
+    gaze_dim: 4      # (x, y) offset for left and right iris
+    landmark_velocity_dim: 10
+    total_behavior_dim: 16
+
+  audio:
+    model_name: "facebook/wav2vec2-base-960h"
+    feature_dim: 768
+    pooling: "mean"
+
+  av_sync:
+    lip_feature_dim: 16
+    audio_feature_dim: 768
+    projection_dim: 128
+    sync_thresholds:
+      consistent: 0.65
+      mild_mismatch: 0.40
+
+  fusion:
+    type: "gated_multimodal_fusion"
+    projection_dim: 256
+    hidden_dim: 128
+    dropout: 0.4
+    num_classes: 1   # Binary: BCEWithLogitsLoss (0=REAL, 1=FAKE)
+
+training:
+  batch_size: 16
+  learning_rate: 0.0003
+  weight_decay: 0.00001
+  epochs: 15
+  early_stopping_patience: 4
+
+checkpoints:
+  dir: "d:/Temporal-Spectral/checkpoints"
+  spatial_checkpoint: "d:/Temporal-Spectral/checkpoints/spatial_best.pt"
+  temporal_checkpoint: "d:/Temporal-Spectral/checkpoints/lstm_best.pt"
+  av_sync_checkpoint: "d:/Temporal-Spectral/checkpoints/av_sync_best.pt"
+  fusion_checkpoint: "d:/Temporal-Spectral/checkpoints/fusion_best.pt"
+
+device:
+  auto_detect: true

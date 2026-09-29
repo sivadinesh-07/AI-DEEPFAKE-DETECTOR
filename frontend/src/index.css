@@ -1,0 +1,108 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+
+    /* Light Theme Palette: #D2FF72, #73EC8B, #54C392, #15B392 */
+    --color-lime: #D2FF72;
+    --color-mint: #73EC8B;
+    --color-emerald: #54C392;
+    --color-teal: #15B392;
+  }
+
+  body {
+    background-color: #f4faf6;
+    color: #0b2922;
+    font-family: var(--font-sans);
+    min-height: 100vh;
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+/* Forensic Background Grid Texture with Mint/Teal Grid Dots */
+.bg-forensic-grid {
+  background-image: radial-gradient(rgba(21, 179, 146, 0.12) 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+
+/* Glassmorphic Light Panels */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(84, 195, 146, 0.28);
+  box-shadow: 0 10px 30px -10px rgba(21, 179, 146, 0.08), 0 1px 3px 0 rgba(0, 0, 0, 0.02);
+}
+
+.glass-panel-subtle {
+  background: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(84, 195, 146, 0.20);
+}
+
+.glass-card {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(240, 251, 246, 0.90) 100%);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(84, 195, 146, 0.25);
+  box-shadow: 0 6px 20px -4px rgba(21, 179, 146, 0.07), 0 2px 6px -1px rgba(0, 0, 0, 0.03);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-card:hover {
+  border-color: rgba(21, 179, 146, 0.6);
+  box-shadow: 0 14px 30px -6px rgba(21, 179, 146, 0.16), 0 0 20px -2px rgba(115, 236, 139, 0.25);
+  transform: translateY(-2px);
+}
+
+/* Luminous Glow Utilities */
+.glow-teal {
+  box-shadow: 0 0 24px -2px rgba(21, 179, 146, 0.35);
+}
+
+.glow-mint {
+  box-shadow: 0 0 24px -2px rgba(115, 236, 139, 0.45);
+}
+
+.glow-lime {
+  box-shadow: 0 0 24px -2px rgba(210, 255, 114, 0.5);
+}
+
+.glow-rose {
+  box-shadow: 0 0 24px -2px rgba(244, 63, 94, 0.35);
+}
+
+/* Custom Forensic Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f0f8f4;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #73EC8B;
+  border-radius: 9999px;
+  border: 1px solid rgba(84, 195, 146, 0.3);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #15B392;
+}
+
+/* Subtle Pulse */
+@keyframes pulse-subtle {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.6; }
+}
+
+.animate-pulse-subtle {
+  animation: pulse-subtle 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}

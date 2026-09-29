@@ -1,0 +1,50 @@
+[
+  {
+    "experiment": "1. EfficientNet-B4 only",
+    "accuracy": 80.0,
+    "precision": 80.0,
+    "recall": 100.0,
+    "f1_score": 88.89,
+    "roc_auc": 0.0
+  },
+  {
+    "experiment": "2. EfficientNet-B4 + LSTM",
+    "accuracy": 80.0,
+    "precision": 80.0,
+    "recall": 100.0,
+    "f1_score": 88.89,
+    "roc_auc": 1.0
+  },
+  {
+    "experiment": "3. Wav2Vec 2.0 only",
+    "accuracy": 80.0,
+    "precision": 80.0,
+    "recall": 100.0,
+    "f1_score": 88.89,
+    "roc_auc": 0.25
+  },
+  {
+    "experiment": "4. Visual + Audio",
+    "accuracy": 80.0,
+    "precision": 80.0,
+    "recall": 100.0,
+    "f1_score": 88.89,
+    "roc_auc": 0.0
+  },
+  {
+    "experiment": "5. Visual + Temporal + Audio",
+    "accuracy": 80.0,
+    "precision": 80.0,
+    "recall": 100.0,
+    "f1_score": 88.89,
+    "roc_auc": 1.0
+  },
+  {
+    "experiment": "6. Full Proposed Multimodal Model",
+    "accuracy": 80.0,
+    "precision": 80.0,
+    "recall": 100.0,
+    "f1_score": 88.89,
+    "roc_auc": 1.0
+  }
+]

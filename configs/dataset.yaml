@@ -1,0 +1,23 @@
+dataset:
+  name: "FakeAVCeleb_UADFV_Forensics"
+  fakeavceleb_path: "d:/Temporal-Spectral/dataset/FakeAVCeleb_v1.2/FakeAVCeleb_v1.2"
+  fakeavceleb_meta: "d:/Temporal-Spectral/dataset/FakeAVCeleb_v1.2/FakeAVCeleb_v1.2/meta_data.csv"
+  uadfv_path: "d:/Temporal-Spectral/dataset/UADFV"
+  
+splits:
+  train_ratio: 0.70
+  val_ratio: 0.15
+  test_ratio: 0.15
+  split_by: "identity"  # guarantees zero identity leakage
+
+preprocessing:
+  frames_per_video: 20
+  frame_size: 224
+  crop_margin: 0.2
+  audio_sample_rate: 16000
+  audio_duration_seconds: 4.0
+  primary_face_selection: "largest_area_and_persistence"
+
+caching:
+  features_cache_dir: "d:/Temporal-Spectral/data/features"
+  processed_dir: "d:/Temporal-Spectral/data/processed"

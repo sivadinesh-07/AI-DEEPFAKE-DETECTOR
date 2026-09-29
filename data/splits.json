@@ -1,0 +1,1408 @@
+{
+  "train": [
+    {
+      "video_path": "D:\\Temporal-Spectral\\dataset\\FakeAVCeleb_v1.2\\FakeAVCeleb_v1.2\\RealVideo-RealAudio\\African\\men\\id00761\\00072.mp4",
+      "identity": "id00761",
+      "category": "RealVideo-RealAudio",
+      "label": 0,
+      "dataset": "FakeAVCeleb"
+    },
+    {
+      "video_path": "D:\\Temporal-Spectral\\dataset\\FakeAVCeleb_v1.2\\FakeAVCeleb_v1.2\\FakeVideo-FakeAudio\\Caucasian (European)\\men\\id00981\\00092_id00559_wavtolip.mp4",
+      "identity": "id00981",
+      "category": "FakeVideo-FakeAudio",
+      "label": 1,
+      "dataset": "FakeAVCeleb"
+    },
+    {
+      "video_path": "D:\\Temporal-Spectral\\dataset\\FakeAVCeleb_v1.2\\FakeAVCeleb_v1.2\\RealVideo-FakeAudio\\Asian (South)\\women\\id04530\\00231_fake.mp4",
+      "identity": "id04530",
+      "category": "RealVideo-FakeAudio",
+      "label": 1,
+      "dataset": "FakeAVCeleb"
+    },
+    {
+      "video_path": "D:\\Temporal-Spectral\\dataset\\FakeAVCeleb_v1.2\\FakeAVCeleb_v1.2\\RealVideo-RealAudio\\Asian (South)\\men\\id07163\\00141.mp4",
+      "identity": "id07163",
+      "category": "RealVideo-RealAudio",
+      "label": 0,
+      "dataset": "FakeAVCeleb"
+    },
+    {
+      "video_path": "D:\\Temporal-Spectral\\dataset\\FakeAVCeleb_v1.2\\FakeAVCeleb_v1.2\\FakeVideo-FakeAudio\\Asian (South)\\men\\id07163\\00141_id00350_75IFJNFAMIM_id07182_wavtolip.mp4",
+      "identity": "id07163",
+      "category": "FakeVideo-FakeAudio",
+      "label": 1,
+      "dataset": "FakeAVCeleb"
+    },
+    {
+      "video_path": "D:\\Temporal-Spectral\\dataset\\FakeAVCeleb_v1.2\\FakeAVCeleb_v1.2\\FakeVideo-RealAudio\\Caucasian (American)\\men\\id00029\\00288_id00062_bctnrIvZHTs.mp4",
+      "identity": "id00029",
+      "category": "FakeVideo-RealAudio",
+      "label": 1,
+      "dataset": "FakeAVCeleb"
+    },
+    {
+      "video_path": "D:\\Temporal-Spectral\\dataset\\FakeAVCeleb_v1.2\\FakeAVCeleb_v1.2\\RealVideo-RealAudio\\African\\women\\id02824\\00130.mp4",
+      "identity": "id02824",
+      "category": "RealVideo-RealAudio",
+      "label": 0,
+      "dataset": "FakeAVCeleb"
+    },
+    {
+      "video_path": "D:\\Temporal-Spectral\\dataset\\FakeAVCeleb_v1.2\\FakeAVCeleb_v1.2\\RealVideo-FakeAudio\\Asian (South)\\men\\id04561\\00248_fake.mp4",
+      "identity": "id04561",
+      "category": "RealVideo-FakeAudio",
+      "label": 1,
+      "dataset": "FakeAVCeleb"
+    },
+    {
+      "video_path": "D:\\Temporal-Spectral\\dataset\\FakeAVCeleb_v1.2\\FakeAVCeleb_v1.2\\RealVideo-FakeAudio\\African\\men\\id00781\\00092_fake.mp4",
+      "identity": "id00781",
+      "category": "RealVideo-FakeAudio",
+      "label": 1,
+      "dataset": "FakeAVCeleb"
+    },
+    {
+      "video_path": "D:\\Temporal-Spectral\\dataset\\FakeAVCeleb_v1.2\\FakeAVCeleb_v1.2\\FakeVideo-FakeAudio\\Caucasian (European)\\men\\id01098\\00044_id01102_aGFUkdgmo3A_faceswap_id01102_wavtolip.mp4",
+      "identity": "id01098",
+      "category": "FakeVideo-FakeAudio",
+      "label": 1,
+      "dataset": "FakeAVCeleb"
+    },
+    {
+      "video_path": "D:\\Temporal-Spectral\\dataset\\FakeAVCeleb_v1.2\\FakeAVCeleb_v1.2\\FakeVideo-FakeAudio\\African\\men\\id01452\\00001_id01610_wavtolip.mp4",
+      "identity": "id01452",
+      "category": "FakeVideo-FakeAudio",
+      "label": 1,
+      "dataset": "FakeAVCeleb"
+    },
+    {
+      "video_path": "D:\\Temporal-Spectral\\dataset\\FakeAVCeleb_v1.2\\FakeAVCeleb_v1.2\\RealVideo-RealAudio\\Caucasian (American)\\men\\id04221\\00053.mp4",
+      "identity": "id04221",
+      "category": "RealVideo-RealAudio",
+      "label": 0,
+      "dataset": "FakeAVCeleb"
+    },
+    {
+      "video_path": "D:\\Temporal-Spectral\\dataset\\FakeAVCeleb_v1.2\\FakeAVCeleb_v1.2\\RealVideo-RealAudio\\Caucasian (European)\\women\\id00806\\00005.mp4",
+      "identity": "id00806",
+      "category": "RealVideo-RealAudio",
+      "label": 0,
+      "dataset": "FakeAVCeleb"
+    },
+    {
+      "video_path": "D:\\Temporal-Spectral\\dataset\\FakeAVCeleb_v1.2\\FakeAVCeleb_v1.2\\RealVideo-RealAudio\\Caucasian (European)\\women\\id03589\\00002.mp4",
+      "identity": "id03589",
+      "category": "RealVideo-RealAudio",
+      "label": 0,
+      "dataset": "FakeAVCeleb"
+    },
+    {
+      "video_path": "D:\\Temporal-Spectral\\dataset\\FakeAVCeleb_v1.2\\FakeAVCeleb_v1.2\\RealVideo-RealAudio\\African\\men\\id00391\\00052.mp4",
+      "identity": "id00391",
+      "category": "RealVideo-RealAudio",
+      "label": 0,
+      "dataset": "FakeAVCeleb"
+    },
+    {
+      "video_path": "D:\\Temporal-Spectral\\dataset\\FakeAVCeleb_v1.2\\FakeAVCeleb_v1.2\\RealVideo-RealAudio\\African\\women\\id02586\\00042.mp4",
+      "identity": "id02586",
+      "category": "RealVideo-RealAudio",
+      "label": 0,
+      "dataset": "FakeAVCeleb"
+    },
+    {
+      "video_path": "D:\\Temporal-Spectral\\dataset\\FakeAVCeleb_v1.2\\FakeAVCeleb_v1.2\\FakeVideo-RealAudio\\Caucasian (American)\\men\\id01239\\00280_id01175_wavtolip.mp4",
+      "identity": "id01239",
+      "category": "FakeVideo-RealAudio",
+      "label": 1,
+      "dataset": "FakeAVCeleb"
+    },
+    {
+      "video_path": "D:\\Temporal-Spectral\\dataset\\FakeAVCeleb_v1.2\\FakeAVCeleb_v1.2\\RealVideo-FakeAudio\\Caucasian (European)\\men\\id00919\\00063_fake.mp4",
+      "identity": "id00919",
+      "category": "RealVideo-FakeAudio",
+      "label": 1,
+      "dataset": "FakeAVCeleb"
+    },
+    {
+      "video_path": "D:\\Temporal-Spectral\\dataset\\FakeAVCeleb_v1.2\\FakeAVCeleb_v1.2\\FakeVideo-RealAudio\\Caucasian (American)\\men\\id00775\\00092_id01096_GHuYIC1WDks.mp4",
+      "identity": "id00775",
+      "category": "FakeVideo-RealAudio",
+      "label": 1,
+      "dataset": "FakeAVCeleb"
+    },
+    {
+      "video_path": "D:\\Temporal-Spectral\\dataset\\FakeAVCeleb_v1.2\\FakeAVCeleb_v1.2\\RealVideo-FakeAudio\\African\\women\\id03656\\00052_fake.mp4",
+      "identity": "id03656",
+      "category": "RealVideo-FakeAudio",
+      "label": 1,
+      "dataset": "FakeAVCeleb"
+    },
+    {
+      "video_path": "D:\\Temporal-Spectral\\dataset\\FakeAVCeleb_v1.2\\FakeAVCeleb_v1.2\\RealVideo-RealAudio\\Caucasian (European)\\women\\id00234\\00063.mp4",
+      "identity": "id00234",
+      "category": "RealVideo-RealAudio",
+      "label": 0,
+      "dataset": "FakeAVCeleb"
+    },
+    {
+      "video_path": "D:\\Temporal-Spectral\\dataset\\FakeAVCeleb_v1.2\\FakeAVCeleb_v1.2\\RealVideo-RealAudio\\African\\men\\id01452\\00001.mp4",
+      "identity": "id01452",
+      "category": "RealVideo-RealAudio",
+      "label": 0,
+      "dataset": "FakeAVCeleb"
+    },
+    {
+      "video_path": "D:\\Temporal-Spectral\\dataset\\FakeAVCeleb_v1.2\\FakeAVCeleb_v1.2\\RealVideo-RealAudio\\Caucasian (European)\\men\\id00306\\00015.mp4",
+      "identity": "id00306",
+      "category": "RealVideo-RealAudio",
+      "label": 0,
+      "dataset": "FakeAVCeleb"
+    },
+    {
+      "video_path": "D:\\Temporal-Spectral\\dataset\\FakeAVCeleb_v1.2\\FakeAVCeleb_v1.2\\RealVideo-RealAudio\\Caucasian (American)\\men\\id01096\\00037.mp4",
+      "identity": "id01096",
+      "category": "RealVideo-RealAudio",
+      "label": 0,
+      "dataset": "FakeAVCeleb"
+    },
+    {
+      "video_path": "D:\\Temporal-Spectral\\dataset\\FakeAVCeleb_v1.2\\FakeAVCeleb_v1.2\\FakeVideo-RealAudio\\Asian (East)\\men\\id00863\\00069_id04774_wavtolip.mp4",
+      "identity": "id00863",
+      "category": "FakeVideo-RealAudio",
+      "label": 1,
+      "dataset": "FakeAVCeleb"
+    },
+    {
+      "video_path": "D:\\Temporal-Spectral\\dataset\\FakeAVCeleb_v1.2\\FakeAVCeleb_v1.2\\RealVideo-RealAudio\\Caucasian (European)\\men\\id01154\\00118.mp4",
+      "identity": "id01154",
+      "category": "RealVideo-RealAudio",
+      "label": 0,
+      "dataset": "FakeAVCeleb"
+    },
+    {
+      "video_path": "D:\\Temporal-Spectral\\dataset\\FakeAVCeleb_v1.2\\FakeAVCeleb_v1.2\\FakeVideo-FakeAudio\\Asian (East)\\men\\id05383\\00015_id03168_wavtolip.mp4",
+      "identity": "id05383",
+      "category": "FakeVideo-FakeAudio",
+      "label": 1,
+      "dataset": "FakeAVCeleb"
+    },
+    {
+      "video_path": "D:\\Temporal-Spectral\\dataset\\FakeAVCeleb_v1.2\\FakeAVCeleb_v1.2\\RealVideo-FakeAudio\\African\\men\\id01179\\00160_fake.mp4",
+      "identity": "id01179",
+      "category": "RealVideo-FakeAudio",
+      "label": 1,
+      "dataset": "FakeAVCeleb"
+    },
+    {
+      "video_path": "D:\\Temporal-Spectral\\dataset\\FakeAVCeleb_v1.2\\FakeAVCeleb_v1.2\\RealVideo-RealAudio\\Caucasian (European)\\men\\id01098\\00044.mp4",
+      "identity": "id01098",
+      "category": "RealVideo-RealAudio",
+      "label": 0,
+      "dataset": "FakeAVCeleb"
+    },
+    {
+      "video_path": "D:\\Temporal-Spectral\\dataset\\FakeAVCeleb_v1.2\\FakeAVCeleb_v1.2\\RealVideo-RealAudio\\Asian (South)\\men\\id07768\\00143.mp4",
+      "identity": "id07768",
+      "category": "RealVideo-RealAudio",
+      "label": 0,
+      "dataset": "FakeAVCeleb"
+    },
+    {
+      "video_path": "D:\\Temporal-Spectral\\dataset\\FakeAVCeleb_v1.2\\FakeAVCeleb_v1.2\\RealVideo-RealAudio\\Caucasian (European)\\men\\id00981\\00092.mp4",
+      "identity": "id00981",
+      "category": "RealVideo-RealAudio",
+      "label": 0,
+      "dataset": "FakeAVCeleb"
+    },
+    {
+      "video_path": "D:\\Temporal-Spectral\\dataset\\FakeAVCeleb_v1.2\\FakeAVCeleb_v1.2\\RealVideo-FakeAudio\\Caucasian (American)\\men\\id01124\\00063_fake.mp4",
+      "identity": "id01124",
+      "category": "RealVideo-FakeAudio",
+      "label": 1,
+      "dataset": "FakeAVCeleb"
+    },
+    {
+      "video_path": "D:\\Temporal-Spectral\\dataset\\FakeAVCeleb_v1.2\\FakeAVCeleb_v1.2\\FakeVideo-RealAudio\\Asian (East)\\women\\id00582\\00006_id00582_wavtolip.mp4",
+      "identity": "id00582",
+      "category": "FakeVideo-RealAudio",
+      "label": 1,
+      "dataset": "FakeAVCeleb"
+    },
+    {
+      "video_path": "D:\\Temporal-Spectral\\dataset\\FakeAVCeleb_v1.2\\FakeAVCeleb_v1.2\\FakeVideo-RealAudio\\African\\women\\id04540\\00078_id00832_Jr4-dXRChME.mp4",
+      "identity": "id04540",
+      "category": "FakeVideo-RealAudio",
+      "label": 1,
+      "dataset": "FakeAVCeleb"
+    },
+    {
+      "video_path": "D:\\Temporal-Spectral\\dataset\\FakeAVCeleb_v1.2\\FakeAVCeleb_v1.2\\FakeVideo-RealAudio\\Caucasian (European)\\women\\id00813\\00169_id00806_0sk9s9lFIAk.mp4",
+      "identity": "id00813",
+      "category": "FakeVideo-RealAudio",
+      "label": 1,
+      "dataset": "FakeAVCeleb"
+    },
+    {
+      "video_path": "D:\\Temporal-Spectral\\dataset\\FakeAVCeleb_v1.2\\FakeAVCeleb_v1.2\\RealVideo-FakeAudio\\African\\men\\id01392\\00167_fake.mp4",
+      "identity": "id01392",
+      "category": "RealVideo-FakeAudio",
+      "label": 1,
+      "dataset": "FakeAVCeleb"
+    },
+    {
+      "video_path": "D:\\Temporal-Spectral\\dataset\\FakeAVCeleb_v1.2\\FakeAVCeleb_v1.2\\RealVideo-FakeAudio\\African\\women\\id00832\\00078_fake.mp4",
+      "identity": "id00832",
+      "category": "RealVideo-FakeAudio",
+      "label": 1,
+      "dataset": "FakeAVCeleb"
+    },
+    {
+      "video_path": "D:\\Temporal-Spectral\\dataset\\FakeAVCeleb_v1.2\\FakeAVCeleb_v1.2\\RealVideo-RealAudio\\Asian (South)\\women\\id05931\\00013.mp4",
+      "identity": "id05931",
+      "category": "RealVideo-RealAudio",
+      "label": 0,
+      "dataset": "FakeAVCeleb"
+    },
+    {
+      "video_path": "D:\\Temporal-Spectral\\dataset\\FakeAVCeleb_v1.2\\FakeAVCeleb_v1.2\\FakeVideo-RealAudio\\Asian (East)\\men\\id04774\\00032_id04691_wavtolip.mp4",
+      "identity": "id04774",
+      "category": "FakeVideo-RealAudio",
+      "label": 1,
+      "dataset": "FakeAVCeleb"
+    },
+    {
+      "video_path": "D:\\Temporal-Spectral\\dataset\\FakeAVCeleb_v1.2\\FakeAVCeleb_v1.2\\FakeVideo-FakeAudio\\Caucasian (European)\\men\\id00192\\00078_id01126_wavtolip.mp4",
+      "identity": "id00192",
+      "category": "FakeVideo-FakeAudio",
+      "label": 1,
+      "dataset": "FakeAVCeleb"
+    },
+    {
+      "video_path": "D:\\Temporal-Spectral\\dataset\\FakeAVCeleb_v1.2\\FakeAVCeleb_v1.2\\RealVideo-FakeAudio\\Asian (South)\\women\\id00747\\00053_fake.mp4",
+      "identity": "id00747",
+      "category": "RealVideo-FakeAudio",
+      "label": 1,
+      "dataset": "FakeAVCeleb"
+    },
+    {
+      "video_path": "D:\\Temporal-Spectral\\dataset\\FakeAVCeleb_v1.2\\FakeAVCeleb_v1.2\\FakeVideo-RealAudio\\African\\men\\id01036\\00010_id01171_wavtolip.mp4",
+      "identity": "id01036",
+      "category": "FakeVideo-RealAudio",
+      "label": 1,
+      "dataset": "FakeAVCeleb"
+    },
+    {
+      "video_path": "D:\\Temporal-Spectral\\dataset\\FakeAVCeleb_v1.2\\FakeAVCeleb_v1.2\\FakeVideo-FakeAudio\\Caucasian (European)\\men\\id00415\\00017_id00192_By3wxX0dyDw_id00963_wavtolip.mp4",
+      "identity": "id00415",
+      "category": "FakeVideo-FakeAudio",
+      "label": 1,
+      "dataset": "FakeAVCeleb"
+    },
+    {
+      "video_path": "D:\\Temporal-Spectral\\dataset\\FakeAVCeleb_v1.2\\FakeAVCeleb_v1.2\\RealVideo-RealAudio\\Caucasian (American)\\women\\id00680\\00110.mp4",
+      "identity": "id00680",
+      "category": "RealVideo-RealAudio",
+      "label": 0,
+      "dataset": "FakeAVCeleb"
+    },
+    {
+      "video_path": "D:\\Temporal-Spectral\\dataset\\FakeAVCeleb_v1.2\\FakeAVCeleb_v1.2\\RealVideo-RealAudio\\Caucasian (European)\\women\\id00813\\00169.mp4",
+      "identity": "id00813",
+      "category": "RealVideo-RealAudio",
+      "label": 0,
+      "dataset": "FakeAVCeleb"
+    },
+    {
+      "video_path": "D:\\Temporal-Spectral\\dataset\\FakeAVCeleb_v1.2\\FakeAVCeleb_v1.2\\RealVideo-RealAudio\\African\\women\\id00832\\00078.mp4",
+      "identity": "id00832",
+      "category": "RealVideo-RealAudio",
+      "label": 0,
+      "dataset": "FakeAVCeleb"
+    },
+    {
+      "video_path": "D:\\Temporal-Spectral\\dataset\\FakeAVCeleb_v1.2\\FakeAVCeleb_v1.2\\RealVideo-RealAudio\\Asian (East)\\women\\id06443\\00232.mp4",
+      "identity": "id06443",
+      "category": "RealVideo-RealAudio",
+      "label": 0,
+      "dataset": "FakeAVCeleb"
+    },
+    {
+      "video_path": "D:\\Temporal-Spectral\\dataset\\FakeAVCeleb_v1.2\\FakeAVCeleb_v1.2\\RealVideo-RealAudio\\African\\men\\id01036\\00010.mp4",
+      "identity": "id01036",
+      "category": "RealVideo-RealAudio",
+      "label": 0,
+      "dataset": "FakeAVCeleb"
+    },
+    {
+      "video_path": "D:\\Temporal-Spectral\\dataset\\FakeAVCeleb_v1.2\\FakeAVCeleb_v1.2\\RealVideo-RealAudio\\Asian (South)\\men\\id00414\\00052.mp4",
+      "identity": "id00414",
+      "category": "RealVideo-RealAudio",
+      "label": 0,
+      "dataset": "FakeAVCeleb"
+    },
+    {
+      "video_path": "D:\\Temporal-Spectral\\dataset\\FakeAVCeleb_v1.2\\FakeAVCeleb_v1.2\\RealVideo-RealAudio\\Caucasian (American)\\men\\id00029\\00288.mp4",
+      "identity": "id00029",
+      "category": "RealVideo-RealAudio",
+      "label": 0,
+      "dataset": "FakeAVCeleb"
+    },
+    {
+      "video_path": "D:\\Temporal-Spectral\\dataset\\FakeAVCeleb_v1.2\\FakeAVCeleb_v1.2\\RealVideo-RealAudio\\African\\men\\id01171\\00053.mp4",
+      "identity": "id01171",
+      "category": "RealVideo-RealAudio",
+      "label": 0,
+      "dataset": "FakeAVCeleb"
+    },
+    {
+      "video_path": "D:\\Temporal-Spectral\\dataset\\FakeAVCeleb_v1.2\\FakeAVCeleb_v1.2\\RealVideo-RealAudio\\Asian (South)\\men\\id04561\\00248.mp4",
+      "identity": "id04561",
+      "category": "RealVideo-RealAudio",
+      "label": 0,
+      "dataset": "FakeAVCeleb"
+    },
+    {
+      "video_path": "D:\\Temporal-Spectral\\dataset\\FakeAVCeleb_v1.2\\FakeAVCeleb_v1.2\\RealVideo-RealAudio\\African\\men\\id01179\\00160.mp4",
+      "identity": "id01179",
+      "category": "RealVideo-RealAudio",
+      "label": 0,
+      "dataset": "FakeAVCeleb"
+    },
+    {
+      "video_path": "D:\\Temporal-Spectral\\dataset\\FakeAVCeleb_v1.2\\FakeAVCeleb_v1.2\\RealVideo-RealAudio\\Asian (South)\\men\\id00082\\00052.mp4",
+      "identity": "id00082",
+      "category": "RealVideo-RealAudio",
+      "label": 0,
+      "dataset": "FakeAVCeleb"
+    },
+    {
+      "video_path": "D:\\Temporal-Spectral\\dataset\\FakeAVCeleb_v1.2\\FakeAVCeleb_v1.2\\RealVideo-FakeAudio\\African\\women\\id05231\\00149_fake.mp4",
+      "identity": "id05231",
+      "category": "RealVideo-FakeAudio",
+      "label": 1,
+      "dataset": "FakeAVCeleb"
+    },
+    {
+      "video_path": "D:\\Temporal-Spectral\\dataset\\FakeAVCeleb_v1.2\\FakeAVCeleb_v1.2\\RealVideo-RealAudio\\Asian (East)\\women\\id07039\\00105.mp4",
+      "identity": "id07039",
+      "category": "RealVideo-RealAudio",
+      "label": 0,
+      "dataset": "FakeAVCeleb"
+    },
+    {
+      "video_path": "D:\\Temporal-Spectral\\dataset\\FakeAVCeleb_v1.2\\FakeAVCeleb_v1.2\\RealVideo-RealAudio\\Caucasian (American)\\men\\id01182\\00167.mp4",
+      "identity": "id01182",
+      "category": "RealVideo-RealAudio",
+      "label": 0,
+      "dataset": "FakeAVCeleb"
+    },
+    {
+      "video_path": "D:\\Temporal-Spectral\\dataset\\FakeAVCeleb_v1.2\\FakeAVCeleb_v1.2\\RealVideo-RealAudio\\Asian (East)\\women\\id00579\\00030.mp4",
+      "identity": "id00579",
+      "category": "RealVideo-RealAudio",
+      "label": 0,
+      "dataset": "FakeAVCeleb"
+    },
+    {
+      "video_path": "D:\\Temporal-Spectral\\dataset\\FakeAVCeleb_v1.2\\FakeAVCeleb_v1.2\\RealVideo-RealAudio\\Asian (South)\\men\\id00350\\00015.mp4",
+      "identity": "id00350",
+      "category": "RealVideo-RealAudio",
+      "label": 0,
+      "dataset": "FakeAVCeleb"
+    },
+    {
+      "video_path": "D:\\Temporal-Spectral\\dataset\\FakeAVCeleb_v1.2\\FakeAVCeleb_v1.2\\RealVideo-RealAudio\\African\\men\\id02051\\00015.mp4",
+      "identity": "id02051",
+      "category": "RealVideo-RealAudio",
+      "label": 0,
+      "dataset": "FakeAVCeleb"
+    },
+    {
+      "video_path": "D:\\Temporal-Spectral\\dataset\\FakeAVCeleb_v1.2\\FakeAVCeleb_v1.2\\RealVideo-RealAudio\\Caucasian (European)\\men\\id00919\\00063.mp4",
+      "identity": "id00919",
+      "category": "RealVideo-RealAudio",
+      "label": 0,
+      "dataset": "FakeAVCeleb"
+    },
+    {
+      "video_path": "D:\\Temporal-Spectral\\dataset\\FakeAVCeleb_v1.2\\FakeAVCeleb_v1.2\\RealVideo-RealAudio\\Asian (East)\\women\\id00582\\00006.mp4",
+      "identity": "id00582",
+      "category": "RealVideo-RealAudio",
+      "label": 0,
+      "dataset": "FakeAVCeleb"
+    },
+    {
+      "video_path": "D:\\Temporal-Spectral\\dataset\\FakeAVCeleb_v1.2\\FakeAVCeleb_v1.2\\FakeVideo-FakeAudio\\Asian (East)\\women\\id03379\\00032_id05631_wavtolip.mp4",
+      "identity": "id03379",
+      "category": "FakeVideo-FakeAudio",
+      "label": 1,
+      "dataset": "FakeAVCeleb"
+    },
+    {
+      "video_path": "D:\\Temporal-Spectral\\dataset\\FakeAVCeleb_v1.2\\FakeAVCeleb_v1.2\\RealVideo-FakeAudio\\Caucasian (American)\\men\\id00243\\00037_fake.mp4",
+      "identity": "id00243",
+      "category": "RealVideo-FakeAudio",
+      "label": 1,
+      "dataset": "FakeAVCeleb"
+    },
+    {
+      "video_path": "D:\\Temporal-Spectral\\dataset\\FakeAVCeleb_v1.2\\FakeAVCeleb_v1.2\\RealVideo-RealAudio\\Caucasian (European)\\women\\id00633\\00088.mp4",
+      "identity": "id00633",
+      "category": "RealVideo-RealAudio",
+      "label": 0,
+      "dataset": "FakeAVCeleb"
+    },
+    {
+      "video_path": "D:\\Temporal-Spectral\\dataset\\FakeAVCeleb_v1.2\\FakeAVCeleb_v1.2\\FakeVideo-RealAudio\\Caucasian (European)\\men\\id01099\\00206_id00253_cyTfcQDjvU0.mp4",
+      "identity": "id01099",
+      "category": "FakeVideo-RealAudio",
+      "label": 1,
+      "dataset": "FakeAVCeleb"
+    },
+    {
+      "video_path": "D:\\Temporal-Spectral\\dataset\\FakeAVCeleb_v1.2\\FakeAVCeleb_v1.2\\RealVideo-RealAudio\\Caucasian (American)\\women\\id02464\\00002.mp4",
+      "identity": "id02464",
+      "category": "RealVideo-RealAudio",
+      "label": 0,
+      "dataset": "FakeAVCeleb"
+    },
+    {
+      "video_path": "D:\\Temporal-Spectral\\dataset\\FakeAVCeleb_v1.2\\FakeAVCeleb_v1.2\\RealVideo-FakeAudio\\Caucasian (European)\\men\\id00186\\00120_fake.mp4",
+      "identity": "id00186",
+      "category": "RealVideo-FakeAudio",
+      "label": 1,
+      "dataset": "FakeAVCeleb"
+    },
+    {
+      "video_path": "D:\\Temporal-Spectral\\dataset\\FakeAVCeleb_v1.2\\FakeAVCeleb_v1.2\\FakeVideo-RealAudio\\African\\men\\id02051\\00015_id01920_w9C_knCPD94.mp4",
+      "identity": "id02051",
+      "category": "FakeVideo-RealAudio",
+      "label": 1,
+      "dataset": "FakeAVCeleb"
+    },
+    {
+      "video_path": "D:\\Temporal-Spectral\\dataset\\FakeAVCeleb_v1.2\\FakeAVCeleb_v1.2\\RealVideo-RealAudio\\African\\men\\id00781\\00092.mp4",
+      "identity": "id00781",
+      "category": "RealVideo-RealAudio",
+      "label": 0,
+      "dataset": "FakeAVCeleb"
+    },
+    {
+      "video_path": "D:\\Temporal-Spectral\\dataset\\FakeAVCeleb_v1.2\\FakeAVCeleb_v1.2\\FakeVideo-FakeAudio\\Asian (South)\\men\\id04537\\00083_1_id07210_wavtolip.mp4",
+      "identity": "id04537",
+      "category": "FakeVideo-FakeAudio",
+      "label": 1,
+      "dataset": "FakeAVCeleb"
+    },
+    {
+      "video_path": "D:\\Temporal-Spectral\\dataset\\FakeAVCeleb_v1.2\\FakeAVCeleb_v1.2\\RealVideo-RealAudio\\Caucasian (American)\\men\\id01124\\00063.mp4",
+      "identity": "id01124",
+      "category": "RealVideo-RealAudio",
+      "label": 0,
+      "dataset": "FakeAVCeleb"
+    },
+    {
+      "video_path": "D:\\Temporal-Spectral\\dataset\\FakeAVCeleb_v1.2\\FakeAVCeleb_v1.2\\RealVideo-FakeAudio\\Caucasian (American)\\women\\id02464\\00002_fake.mp4",
+      "identity": "id02464",
+      "category": "RealVideo-FakeAudio",
+      "label": 1,
+      "dataset": "FakeAVCeleb"
+    },
+    {
+      "video_path": "D:\\Temporal-Spectral\\dataset\\FakeAVCeleb_v1.2\\FakeAVCeleb_v1.2\\FakeVideo-RealAudio\\Caucasian (European)\\women\\id00234\\00063_id00403_n4LSCxzFr6o_faceswap.mp4",
+      "identity": "id00234",
+      "category": "FakeVideo-RealAudio",
+      "label": 1,
+      "dataset": "FakeAVCeleb"
+    },
+    {
+      "video_path": "D:\\Temporal-Spectral\\dataset\\FakeAVCeleb_v1.2\\FakeAVCeleb_v1.2\\RealVideo-FakeAudio\\Caucasian (European)\\women\\id00633\\00088_fake.mp4",
+      "identity": "id00633",
+      "category": "RealVideo-FakeAudio",
+      "label": 1,
+      "dataset": "FakeAVCeleb"
+    },
+    {
+      "video_path": "D:\\Temporal-Spectral\\dataset\\FakeAVCeleb_v1.2\\FakeAVCeleb_v1.2\\RealVideo-RealAudio\\Caucasian (European)\\women\\id00332\\00293.mp4",
+      "identity": "id00332",
+      "category": "RealVideo-RealAudio",
+      "label": 0,
+      "dataset": "FakeAVCeleb"
+    },
+    {
+      "video_path": "D:\\Temporal-Spectral\\dataset\\FakeAVCeleb_v1.2\\FakeAVCeleb_v1.2\\RealVideo-RealAudio\\Caucasian (American)\\men\\id01239\\00280.mp4",
+      "identity": "id01239",
+      "category": "RealVideo-RealAudio",
+      "label": 0,
+      "dataset": "FakeAVCeleb"
+    },
+    {
+      "video_path": "D:\\Temporal-Spectral\\dataset\\FakeAVCeleb_v1.2\\FakeAVCeleb_v1.2\\FakeVideo-FakeAudio\\Caucasian (European)\\men\\id01154\\00118_id01052_wavtolip.mp4",
+      "identity": "id01154",
+      "category": "FakeVideo-FakeAudio",
+      "label": 1,
+      "dataset": "FakeAVCeleb"
+    },
+    {
+      "video_path": "D:\\Temporal-Spectral\\dataset\\FakeAVCeleb_v1.2\\FakeAVCeleb_v1.2\\RealVideo-RealAudio\\Asian (East)\\women\\id06427\\00138.mp4",
+      "identity": "id06427",
+      "category": "RealVideo-RealAudio",
+      "label": 0,
+      "dataset": "FakeAVCeleb"
+    },
+    {
+      "video_path": "D:\\Temporal-Spectral\\dataset\\FakeAVCeleb_v1.2\\FakeAVCeleb_v1.2\\FakeVideo-FakeAudio\\African\\men\\id00761\\00072_id01972_wavtolip.mp4",
+      "identity": "id00761",
+      "category": "FakeVideo-FakeAudio",
+      "label": 1,
+      "dataset": "FakeAVCeleb"
+    },
+    {
+      "video_path": "D:\\Temporal-Spectral\\dataset\\FakeAVCeleb_v1.2\\FakeAVCeleb_v1.2\\FakeVideo-FakeAudio\\Caucasian (European)\\women\\id03716\\00040_id00897_0ayFw8JhoyI_id00232_wavtolip.mp4",
+      "identity": "id03716",
+      "category": "FakeVideo-FakeAudio",
+      "label": 1,
+      "dataset": "FakeAVCeleb"
+    },
+    {
+      "video_path": "D:\\Temporal-Spectral\\dataset\\FakeAVCeleb_v1.2\\FakeAVCeleb_v1.2\\FakeVideo-RealAudio\\Asian (South)\\men\\id07768\\00143_id03599_wavtolip.mp4",
+      "identity": "id07768",
+      "category": "FakeVideo-RealAudio",
+      "label": 1,
+      "dataset": "FakeAVCeleb"
+    },
+    {
+      "video_path": "D:\\Temporal-Spectral\\dataset\\FakeAVCeleb_v1.2\\FakeAVCeleb_v1.2\\RealVideo-RealAudio\\Asian (East)\\men\\id04691\\1.mp4",
+      "identity": "id04691",
+      "category": "RealVideo-RealAudio",
+      "label": 0,
+      "dataset": "FakeAVCeleb"
+    },
+    {
+      "video_path": "D:\\Temporal-Spectral\\dataset\\FakeAVCeleb_v1.2\\FakeAVCeleb_v1.2\\RealVideo-RealAudio\\Caucasian (European)\\men\\id01099\\00206.mp4",
+      "identity": "id01099",
+      "category": "RealVideo-RealAudio",
+      "label": 0,
+      "dataset": "FakeAVCeleb"
+    },
+    {
+      "video_path": "D:\\Temporal-Spectral\\dataset\\FakeAVCeleb_v1.2\\FakeAVCeleb_v1.2\\RealVideo-RealAudio\\Caucasian (American)\\men\\id00243\\00037.mp4",
+      "identity": "id00243",
+      "category": "RealVideo-RealAudio",
+      "label": 0,
+      "dataset": "FakeAVCeleb"
+    },
+    {
+      "video_path": "D:\\Temporal-Spectral\\dataset\\FakeAVCeleb_v1.2\\FakeAVCeleb_v1.2\\RealVideo-RealAudio\\African\\women\\id03656\\00052.mp4",
+      "identity": "id03656",
+      "category": "RealVideo-RealAudio",
+      "label": 0,
+      "dataset": "FakeAVCeleb"
+    },
+    {
+      "video_path": "D:\\Temporal-Spectral\\dataset\\FakeAVCeleb_v1.2\\FakeAVCeleb_v1.2\\RealVideo-RealAudio\\Caucasian (European)\\men\\id00266\\00470.mp4",
+      "identity": "id00266",
+      "category": "RealVideo-RealAudio",
+      "label": 0,
+      "dataset": "FakeAVCeleb"
+    },
+    {
+      "video_path": "D:\\Temporal-Spectral\\dataset\\FakeAVCeleb_v1.2\\FakeAVCeleb_v1.2\\RealVideo-RealAudio\\Caucasian (American)\\women\\id00428\\00017.mp4",
+      "identity": "id00428",
+      "category": "RealVideo-RealAudio",
+      "label": 0,
+      "dataset": "FakeAVCeleb"
+    },
+    {
+      "video_path": "D:\\Temporal-Spectral\\dataset\\FakeAVCeleb_v1.2\\FakeAVCeleb_v1.2\\FakeVideo-RealAudio\\Caucasian (European)\\men\\id00306\\00015_id00282_wavtolip.mp4",
+      "identity": "id00306",
+      "category": "FakeVideo-RealAudio",
+      "label": 1,
+      "dataset": "FakeAVCeleb"
+    },
+    {
+      "video_path": "D:\\Temporal-Spectral\\dataset\\FakeAVCeleb_v1.2\\FakeAVCeleb_v1.2\\FakeVideo-RealAudio\\African\\men\\id01171\\00053_id00166_PQV2ZbJBLNk.mp4",
+      "identity": "id01171",
+      "category": "FakeVideo-RealAudio",
+      "label": 1,
+      "dataset": "FakeAVCeleb"
+    },
+    {
+      "video_path": "D:\\Temporal-Spectral\\dataset\\FakeAVCeleb_v1.2\\FakeAVCeleb_v1.2\\RealVideo-FakeAudio\\Asian (East)\\women\\id07039\\00105_fake.mp4",
+      "identity": "id07039",
+      "category": "RealVideo-FakeAudio",
+      "label": 1,
+      "dataset": "FakeAVCeleb"
+    },
+    {
+      "video_path": "D:\\Temporal-Spectral\\dataset\\FakeAVCeleb_v1.2\\FakeAVCeleb_v1.2\\FakeVideo-RealAudio\\African\\men\\id00391\\00052_id00987_wavtolip.mp4",
+      "identity": "id00391",
+      "category": "FakeVideo-RealAudio",
+      "label": 1,
+      "dataset": "FakeAVCeleb"
+    },
+    {
+      "video_path": "D:\\Temporal-Spectral\\dataset\\FakeAVCeleb_v1.2\\FakeAVCeleb_v1.2\\FakeVideo-RealAudio\\Caucasian (American)\\women\\id00428\\00017_id00231_wavtolip.mp4",
+      "identity": "id00428",
+      "category": "FakeVideo-RealAudio",
+      "label": 1,
+      "dataset": "FakeAVCeleb"
+    },
+    {
+      "video_path": "D:\\Temporal-Spectral\\dataset\\FakeAVCeleb_v1.2\\FakeAVCeleb_v1.2\\RealVideo-FakeAudio\\Caucasian (European)\\women\\id00042\\00028_fake.mp4",
+      "identity": "id00042",
+      "category": "RealVideo-FakeAudio",
+      "label": 1,
+      "dataset": "FakeAVCeleb"
+    },
+    {
+      "video_path": "D:\\Temporal-Spectral\\dataset\\FakeAVCeleb_v1.2\\FakeAVCeleb_v1.2\\FakeVideo-FakeAudio\\Asian (South)\\men\\id00082\\00052_id00033_wavtolip.mp4",
+      "identity": "id00082",
+      "category": "FakeVideo-FakeAudio",
+      "label": 1,
+      "dataset": "FakeAVCeleb"
+    },
+    {
+      "video_path": "D:\\Temporal-Spectral\\dataset\\FakeAVCeleb_v1.2\\FakeAVCeleb_v1.2\\RealVideo-RealAudio\\African\\women\\id04540\\00078.mp4",
+      "identity": "id04540",
+      "category": "RealVideo-RealAudio",
+      "label": 0,
+      "dataset": "FakeAVCeleb"
+    },
+    {
+      "video_path": "D:\\Temporal-Spectral\\dataset\\FakeAVCeleb_v1.2\\FakeAVCeleb_v1.2\\RealVideo-RealAudio\\Caucasian (European)\\men\\id00186\\00120.mp4",
+      "identity": "id00186",
+      "category": "RealVideo-RealAudio",
+      "label": 0,
+      "dataset": "FakeAVCeleb"
+    },
+    {
+      "video_path": "D:\\Temporal-Spectral\\dataset\\FakeAVCeleb_v1.2\\FakeAVCeleb_v1.2\\FakeVideo-FakeAudio\\Caucasian (American)\\men\\id01182\\00167_2_id01035_wavtolip.mp4",
+      "identity": "id01182",
+      "category": "FakeVideo-FakeAudio",
+      "label": 1,
+      "dataset": "FakeAVCeleb"
+    },
+    {
+      "video_path": "D:\\Temporal-Spectral\\dataset\\FakeAVCeleb_v1.2\\FakeAVCeleb_v1.2\\RealVideo-RealAudio\\Caucasian (European)\\men\\id00415\\00017.mp4",
+      "identity": "id00415",
+      "category": "RealVideo-RealAudio",
+      "label": 0,
+      "dataset": "FakeAVCeleb"
+    },
+    {
+      "video_path": "D:\\Temporal-Spectral\\dataset\\FakeAVCeleb_v1.2\\FakeAVCeleb_v1.2\\RealVideo-RealAudio\\Asian (South)\\women\\id00747\\00053.mp4",
+      "identity": "id00747",
+      "category": "RealVideo-RealAudio",
+      "label": 0,
+      "dataset": "FakeAVCeleb"
+    },
+    {
+      "video_path": "D:\\Temporal-Spectral\\dataset\\FakeAVCeleb_v1.2\\FakeAVCeleb_v1.2\\RealVideo-RealAudio\\African\\women\\id05231\\00149.mp4",
+      "identity": "id05231",
+      "category": "RealVideo-RealAudio",
+      "label": 0,
+      "dataset": "FakeAVCeleb"
+    },
+    {
+      "video_path": "D:\\Temporal-Spectral\\dataset\\FakeAVCeleb_v1.2\\FakeAVCeleb_v1.2\\RealVideo-FakeAudio\\Caucasian (American)\\men\\id01096\\00037_fake.mp4",
+      "identity": "id01096",
+      "category": "RealVideo-FakeAudio",
+      "label": 1,
+      "dataset": "FakeAVCeleb"
+    },
+    {
+      "video_path": "D:\\Temporal-Spectral\\dataset\\FakeAVCeleb_v1.2\\FakeAVCeleb_v1.2\\FakeVideo-FakeAudio\\African\\women\\id02586\\00042_id04055_0qrzF4HLXHY_id02301_wavtolip.mp4",
+      "identity": "id02586",
+      "category": "FakeVideo-FakeAudio",
+      "label": 1,
+      "dataset": "FakeAVCeleb"
+    },
+    {
+      "video_path": "D:\\Temporal-Spectral\\dataset\\FakeAVCeleb_v1.2\\FakeAVCeleb_v1.2\\RealVideo-RealAudio\\Caucasian (European)\\women\\id00042\\00028.mp4",
+      "identity": "id00042",
+      "category": "RealVideo-RealAudio",
+      "label": 0,
+      "dataset": "FakeAVCeleb"
+    },
+    {
+      "video_path": "D:\\Temporal-Spectral\\dataset\\FakeAVCeleb_v1.2\\FakeAVCeleb_v1.2\\RealVideo-RealAudio\\Asian (East)\\men\\id00863\\00069.mp4",
+      "identity": "id00863",
+      "category": "RealVideo-RealAudio",
+      "label": 0,
+      "dataset": "FakeAVCeleb"
+    },
+    {
+      "video_path": "D:\\Temporal-Spectral\\dataset\\FakeAVCeleb_v1.2\\FakeAVCeleb_v1.2\\RealVideo-RealAudio\\Caucasian (European)\\men\\id00192\\00078.mp4",
+      "identity": "id00192",
+      "category": "RealVideo-RealAudio",
+      "label": 0,
+      "dataset": "FakeAVCeleb"
+    },
+    {
+      "video_path": "D:\\Temporal-Spectral\\dataset\\FakeAVCeleb_v1.2\\FakeAVCeleb_v1.2\\FakeVideo-RealAudio\\Asian (South)\\women\\id05931\\00013_id07236_wavtolip.mp4",
+      "identity": "id05931",
+      "category": "FakeVideo-RealAudio",
+      "label": 1,
+      "dataset": "FakeAVCeleb"
+    },
+    {
+      "video_path": "D:\\Temporal-Spectral\\dataset\\FakeAVCeleb_v1.2\\FakeAVCeleb_v1.2\\RealVideo-RealAudio\\Asian (East)\\men\\id06470\\00052.mp4",
+      "identity": "id06470",
+      "category": "RealVideo-RealAudio",
+      "label": 0,
+      "dataset": "FakeAVCeleb"
+    },
+    {
+      "video_path": "D:\\Temporal-Spectral\\dataset\\FakeAVCeleb_v1.2\\FakeAVCeleb_v1.2\\FakeVideo-FakeAudio\\Caucasian (European)\\women\\id00806\\00005_id01002_eQTviHjyISo_id03620_wavtolip.mp4",
+      "identity": "id00806",
+      "category": "FakeVideo-FakeAudio",
+      "label": 1,
+      "dataset": "FakeAVCeleb"
+    },
+    {
+      "video_path": "D:\\Temporal-Spectral\\dataset\\FakeAVCeleb_v1.2\\FakeAVCeleb_v1.2\\RealVideo-RealAudio\\Caucasian (European)\\women\\id03716\\00040.mp4",
+      "identity": "id03716",
+      "category": "RealVideo-RealAudio",
+      "label": 0,
+      "dataset": "FakeAVCeleb"
+    },
+    {
+      "video_path": "D:\\Temporal-Spectral\\dataset\\FakeAVCeleb_v1.2\\FakeAVCeleb_v1.2\\RealVideo-RealAudio\\African\\women\\id02808\\00056.mp4",
+      "identity": "id02808",
+      "category": "RealVideo-RealAudio",
+      "label": 0,
+      "dataset": "FakeAVCeleb"
+    },
+    {
+      "video_path": "D:\\Temporal-Spectral\\dataset\\FakeAVCeleb_v1.2\\FakeAVCeleb_v1.2\\FakeVideo-FakeAudio\\Asian (East)\\women\\id00579\\00030_id06462_Nn79kE76MA4_faceswap_id00566_wavtolip.mp4",
+      "identity": "id00579",
+      "category": "FakeVideo-FakeAudio",
+      "label": 1,
+      "dataset": "FakeAVCeleb"
+    },
+    {
+      "video_path": "D:\\Temporal-Spectral\\dataset\\FakeAVCeleb_v1.2\\FakeAVCeleb_v1.2\\RealVideo-RealAudio\\Asian (East)\\men\\id04774\\00032.mp4",
+      "identity": "id04774",
+      "category": "RealVideo-RealAudio",
+      "label": 0,
+      "dataset": "FakeAVCeleb"
+    },
+    {
+      "video_path": "D:\\Temporal-Spectral\\dataset\\FakeAVCeleb_v1.2\\FakeAVCeleb_v1.2\\RealVideo-RealAudio\\Asian (South)\\men\\id04537\\00083.mp4",
+      "identity": "id04537",
+      "category": "RealVideo-RealAudio",
+      "label": 0,
+      "dataset": "FakeAVCeleb"
+    },
+    {
+      "video_path": "D:\\Temporal-Spectral\\dataset\\FakeAVCeleb_v1.2\\FakeAVCeleb_v1.2\\FakeVideo-RealAudio\\African\\women\\id02808\\00056_id04437_wavtolip.mp4",
+      "identity": "id02808",
+      "category": "FakeVideo-RealAudio",
+      "label": 1,
+      "dataset": "FakeAVCeleb"
+    },
+    {
+      "video_path": "D:\\Temporal-Spectral\\dataset\\FakeAVCeleb_v1.2\\FakeAVCeleb_v1.2\\FakeVideo-RealAudio\\Asian (South)\\women\\id00739\\00005_id05845_wavtolip.mp4",
+      "identity": "id00739",
+      "category": "FakeVideo-RealAudio",
+      "label": 1,
+      "dataset": "FakeAVCeleb"
+    },
+    {
+      "video_path": "D:\\Temporal-Spectral\\dataset\\FakeAVCeleb_v1.2\\FakeAVCeleb_v1.2\\FakeVideo-RealAudio\\Asian (East)\\men\\id06470\\00052_id04691_wavtolip.mp4",
+      "identity": "id06470",
+      "category": "FakeVideo-RealAudio",
+      "label": 1,
+      "dataset": "FakeAVCeleb"
+    },
+    {
+      "video_path": "D:\\Temporal-Spectral\\dataset\\FakeAVCeleb_v1.2\\FakeAVCeleb_v1.2\\RealVideo-RealAudio\\Asian (South)\\men\\id00857\\00347.mp4",
+      "identity": "id00857",
+      "category": "RealVideo-RealAudio",
+      "label": 0,
+      "dataset": "FakeAVCeleb"
+    },
+    {
+      "video_path": "D:\\Temporal-Spectral\\dataset\\FakeAVCeleb_v1.2\\FakeAVCeleb_v1.2\\RealVideo-FakeAudio\\Asian (South)\\men\\id00414\\00052_fake.mp4",
+      "identity": "id00414",
+      "category": "RealVideo-FakeAudio",
+      "label": 1,
+      "dataset": "FakeAVCeleb"
+    },
+    {
+      "video_path": "D:\\Temporal-Spectral\\dataset\\FakeAVCeleb_v1.2\\FakeAVCeleb_v1.2\\FakeVideo-FakeAudio\\Caucasian (American)\\women\\id00680\\00110_id00841_wavtolip.mp4",
+      "identity": "id00680",
+      "category": "FakeVideo-FakeAudio",
+      "label": 1,
+      "dataset": "FakeAVCeleb"
+    },
+    {
+      "video_path": "D:\\Temporal-Spectral\\dataset\\FakeAVCeleb_v1.2\\FakeAVCeleb_v1.2\\RealVideo-RealAudio\\Caucasian (American)\\men\\id00775\\00092.mp4",
+      "identity": "id00775",
+      "category": "RealVideo-RealAudio",
+      "label": 0,
+      "dataset": "FakeAVCeleb"
+    },
+    {
+      "video_path": "D:\\Temporal-Spectral\\dataset\\FakeAVCeleb_v1.2\\FakeAVCeleb_v1.2\\RealVideo-FakeAudio\\Caucasian (European)\\men\\id00554\\00028_fake.mp4",
+      "identity": "id00554",
+      "category": "RealVideo-FakeAudio",
+      "label": 1,
+      "dataset": "FakeAVCeleb"
+    },
+    {
+      "video_path": "D:\\Temporal-Spectral\\dataset\\FakeAVCeleb_v1.2\\FakeAVCeleb_v1.2\\RealVideo-FakeAudio\\Asian (East)\\women\\id06427\\00138_fake.mp4",
+      "identity": "id06427",
+      "category": "RealVideo-FakeAudio",
+      "label": 1,
+      "dataset": "FakeAVCeleb"
+    },
+    {
+      "video_path": "D:\\Temporal-Spectral\\dataset\\FakeAVCeleb_v1.2\\FakeAVCeleb_v1.2\\FakeVideo-FakeAudio\\Asian (South)\\men\\id00350\\00015_id08313_wavtolip.mp4",
+      "identity": "id00350",
+      "category": "FakeVideo-FakeAudio",
+      "label": 1,
+      "dataset": "FakeAVCeleb"
+    },
+    {
+      "video_path": "D:\\Temporal-Spectral\\dataset\\FakeAVCeleb_v1.2\\FakeAVCeleb_v1.2\\FakeVideo-FakeAudio\\Asian (South)\\men\\id00857\\00347_id04561_tU_UYY5hSvc_id00816_wavtolip.mp4",
+      "identity": "id00857",
+      "category": "FakeVideo-FakeAudio",
+      "label": 1,
+      "dataset": "FakeAVCeleb"
+    },
+    {
+      "video_path": "D:\\Temporal-Spectral\\dataset\\FakeAVCeleb_v1.2\\FakeAVCeleb_v1.2\\RealVideo-RealAudio\\Asian (South)\\women\\id04530\\00231.mp4",
+      "identity": "id04530",
+      "category": "RealVideo-RealAudio",
+      "label": 0,
+      "dataset": "FakeAVCeleb"
+    },
+    {
+      "video_path": "D:\\Temporal-Spectral\\dataset\\FakeAVCeleb_v1.2\\FakeAVCeleb_v1.2\\FakeVideo-FakeAudio\\Caucasian (European)\\men\\id00266\\00470_id00594_2WHHoksbeVw_faceswap_id00909_wavtolip.mp4",
+      "identity": "id00266",
+      "category": "FakeVideo-FakeAudio",
+      "label": 1,
+      "dataset": "FakeAVCeleb"
+    },
+    {
+      "video_path": "D:\\Temporal-Spectral\\dataset\\FakeAVCeleb_v1.2\\FakeAVCeleb_v1.2\\FakeVideo-RealAudio\\Caucasian (American)\\men\\id04221\\00053_id00529_xtx2GeQN-DQ.mp4",
+      "identity": "id04221",
+      "category": "FakeVideo-RealAudio",
+      "label": 1,
+      "dataset": "FakeAVCeleb"
+    },
+    {
+      "video_path": "D:\\Temporal-Spectral\\dataset\\FakeAVCeleb_v1.2\\FakeAVCeleb_v1.2\\RealVideo-FakeAudio\\Caucasian (European)\\women\\id00332\\00293_fake.mp4",
+      "identity": "id00332",
+      "category": "RealVideo-FakeAudio",
+      "label": 1,
+      "dataset": "FakeAVCeleb"
+    },
+    {
+      "video_path": "D:\\Temporal-Spectral\\dataset\\FakeAVCeleb_v1.2\\FakeAVCeleb_v1.2\\FakeVideo-FakeAudio\\Asian (East)\\women\\id06443\\00232_id02587_wavtolip.mp4",
+      "identity": "id06443",
+      "category": "FakeVideo-FakeAudio",
+      "label": 1,
+      "dataset": "FakeAVCeleb"
+    },
+    {
+      "video_path": "D:\\Temporal-Spectral\\dataset\\FakeAVCeleb_v1.2\\FakeAVCeleb_v1.2\\RealVideo-RealAudio\\Asian (East)\\women\\id03379\\00032.mp4",
+      "identity": "id03379",
+      "category": "RealVideo-RealAudio",
+      "label": 0,
+      "dataset": "FakeAVCeleb"
+    },
+    {
+      "video_path": "D:\\Temporal-Spectral\\dataset\\FakeAVCeleb_v1.2\\FakeAVCeleb_v1.2\\RealVideo-RealAudio\\Caucasian (American)\\women\\id00180\\00206.mp4",
+      "identity": "id00180",
+      "category": "RealVideo-RealAudio",
+      "label": 0,
+      "dataset": "FakeAVCeleb"
+    },
+    {
+      "video_path": "D:\\Temporal-Spectral\\dataset\\FakeAVCeleb_v1.2\\FakeAVCeleb_v1.2\\RealVideo-RealAudio\\Caucasian (European)\\men\\id00554\\00028.mp4",
+      "identity": "id00554",
+      "category": "RealVideo-RealAudio",
+      "label": 0,
+      "dataset": "FakeAVCeleb"
+    },
+    {
+      "video_path": "D:\\Temporal-Spectral\\dataset\\FakeAVCeleb_v1.2\\FakeAVCeleb_v1.2\\FakeVideo-FakeAudio\\Asian (East)\\men\\id04691\\1_2_id08652_wavtolip.mp4",
+      "identity": "id04691",
+      "category": "FakeVideo-FakeAudio",
+      "label": 1,
+      "dataset": "FakeAVCeleb"
+    },
+    {
+      "video_path": "D:\\Temporal-Spectral\\dataset\\FakeAVCeleb_v1.2\\FakeAVCeleb_v1.2\\RealVideo-RealAudio\\Asian (South)\\women\\id00739\\00005.mp4",
+      "identity": "id00739",
+      "category": "RealVideo-RealAudio",
+      "label": 0,
+      "dataset": "FakeAVCeleb"
+    },
+    {
+      "video_path": "D:\\Temporal-Spectral\\dataset\\FakeAVCeleb_v1.2\\FakeAVCeleb_v1.2\\FakeVideo-RealAudio\\Caucasian (European)\\women\\id03589\\00002_id00634_z5t9oJizDQg.mp4",
+      "identity": "id03589",
+      "category": "FakeVideo-RealAudio",
+      "label": 1,
+      "dataset": "FakeAVCeleb"
+    },
+    {
+      "video_path": "D:\\Temporal-Spectral\\dataset\\FakeAVCeleb_v1.2\\FakeAVCeleb_v1.2\\RealVideo-RealAudio\\African\\men\\id01392\\00167.mp4",
+      "identity": "id01392",
+      "category": "RealVideo-RealAudio",
+      "label": 0,
+      "dataset": "FakeAVCeleb"
+    },
+    {
+      "video_path": "D:\\Temporal-Spectral\\dataset\\FakeAVCeleb_v1.2\\FakeAVCeleb_v1.2\\RealVideo-FakeAudio\\African\\women\\id02824\\00130_fake.mp4",
+      "identity": "id02824",
+      "category": "RealVideo-FakeAudio",
+      "label": 1,
+      "dataset": "FakeAVCeleb"
+    },
+    {
+      "video_path": "D:\\Temporal-Spectral\\dataset\\FakeAVCeleb_v1.2\\FakeAVCeleb_v1.2\\FakeVideo-RealAudio\\Caucasian (American)\\women\\id00180\\00206_id00231_wavtolip.mp4",
+      "identity": "id00180",
+      "category": "FakeVideo-RealAudio",
+      "label": 1,
+      "dataset": "FakeAVCeleb"
+    },
+    {
+      "video_path": "D:\\Temporal-Spectral\\dataset\\FakeAVCeleb_v1.2\\FakeAVCeleb_v1.2\\RealVideo-RealAudio\\Asian (East)\\men\\id05383\\00015.mp4",
+      "identity": "id05383",
+      "category": "RealVideo-RealAudio",
+      "label": 0,
+      "dataset": "FakeAVCeleb"
+    }
+  ],
+  "val": [
+    {
+      "video_path": "D:\\Temporal-Spectral\\dataset\\FakeAVCeleb_v1.2\\FakeAVCeleb_v1.2\\FakeVideo-RealAudio\\Asian (South)\\men\\id00033\\00276_id04599_wavtolip.mp4",
+      "identity": "id00033",
+      "category": "FakeVideo-RealAudio",
+      "label": 1,
+      "dataset": "FakeAVCeleb"
+    },
+    {
+      "video_path": "D:\\Temporal-Spectral\\dataset\\FakeAVCeleb_v1.2\\FakeAVCeleb_v1.2\\FakeVideo-RealAudio\\Caucasian (American)\\women\\id01245\\00028_id01238_VPdv2sexRy0.mp4",
+      "identity": "id01245",
+      "category": "FakeVideo-RealAudio",
+      "label": 1,
+      "dataset": "FakeAVCeleb"
+    },
+    {
+      "video_path": "D:\\Temporal-Spectral\\dataset\\FakeAVCeleb_v1.2\\FakeAVCeleb_v1.2\\RealVideo-RealAudio\\African\\men\\id02494\\00050.mp4",
+      "identity": "id02494",
+      "category": "RealVideo-RealAudio",
+      "label": 0,
+      "dataset": "FakeAVCeleb"
+    },
+    {
+      "video_path": "D:\\Temporal-Spectral\\dataset\\FakeAVCeleb_v1.2\\FakeAVCeleb_v1.2\\FakeVideo-FakeAudio\\Asian (South)\\men\\id07200\\00045_id04601_wavtolip.mp4",
+      "identity": "id07200",
+      "category": "FakeVideo-FakeAudio",
+      "label": 1,
+      "dataset": "FakeAVCeleb"
+    },
+    {
+      "video_path": "D:\\Temporal-Spectral\\dataset\\FakeAVCeleb_v1.2\\FakeAVCeleb_v1.2\\FakeVideo-RealAudio\\Caucasian (American)\\women\\id00575\\00092_id00383_n6i0VWqGcKI.mp4",
+      "identity": "id00575",
+      "category": "FakeVideo-RealAudio",
+      "label": 1,
+      "dataset": "FakeAVCeleb"
+    },
+    {
+      "video_path": "D:\\Temporal-Spectral\\dataset\\FakeAVCeleb_v1.2\\FakeAVCeleb_v1.2\\RealVideo-RealAudio\\African\\women\\id05106\\00078.mp4",
+      "identity": "id05106",
+      "category": "RealVideo-RealAudio",
+      "label": 0,
+      "dataset": "FakeAVCeleb"
+    },
+    {
+      "video_path": "D:\\Temporal-Spectral\\dataset\\FakeAVCeleb_v1.2\\FakeAVCeleb_v1.2\\RealVideo-RealAudio\\Caucasian (American)\\men\\id01105\\00083.mp4",
+      "identity": "id01105",
+      "category": "RealVideo-RealAudio",
+      "label": 0,
+      "dataset": "FakeAVCeleb"
+    },
+    {
+      "video_path": "D:\\Temporal-Spectral\\dataset\\FakeAVCeleb_v1.2\\FakeAVCeleb_v1.2\\FakeVideo-FakeAudio\\Caucasian (American)\\men\\id01105\\00083_id04221_wavtolip.mp4",
+      "identity": "id01105",
+      "category": "FakeVideo-FakeAudio",
+      "label": 1,
+      "dataset": "FakeAVCeleb"
+    },
+    {
+      "video_path": "D:\\Temporal-Spectral\\dataset\\FakeAVCeleb_v1.2\\FakeAVCeleb_v1.2\\RealVideo-RealAudio\\Caucasian (American)\\women\\id01245\\00028.mp4",
+      "identity": "id01245",
+      "category": "RealVideo-RealAudio",
+      "label": 0,
+      "dataset": "FakeAVCeleb"
+    },
+    {
+      "video_path": "D:\\Temporal-Spectral\\dataset\\FakeAVCeleb_v1.2\\FakeAVCeleb_v1.2\\RealVideo-RealAudio\\Asian (South)\\men\\id07200\\00045.mp4",
+      "identity": "id07200",
+      "category": "RealVideo-RealAudio",
+      "label": 0,
+      "dataset": "FakeAVCeleb"
+    },
+    {
+      "video_path": "D:\\Temporal-Spectral\\dataset\\FakeAVCeleb_v1.2\\FakeAVCeleb_v1.2\\RealVideo-RealAudio\\Asian (South)\\men\\id00033\\00276.mp4",
+      "identity": "id00033",
+      "category": "RealVideo-RealAudio",
+      "label": 0,
+      "dataset": "FakeAVCeleb"
+    },
+    {
+      "video_path": "D:\\Temporal-Spectral\\dataset\\FakeAVCeleb_v1.2\\FakeAVCeleb_v1.2\\RealVideo-RealAudio\\Asian (South)\\women\\id00417\\00069.mp4",
+      "identity": "id00417",
+      "category": "RealVideo-RealAudio",
+      "label": 0,
+      "dataset": "FakeAVCeleb"
+    },
+    {
+      "video_path": "D:\\Temporal-Spectral\\dataset\\FakeAVCeleb_v1.2\\FakeAVCeleb_v1.2\\RealVideo-RealAudio\\Caucasian (European)\\men\\id00055\\00120.mp4",
+      "identity": "id00055",
+      "category": "RealVideo-RealAudio",
+      "label": 0,
+      "dataset": "FakeAVCeleb"
+    },
+    {
+      "video_path": "D:\\Temporal-Spectral\\dataset\\FakeAVCeleb_v1.2\\FakeAVCeleb_v1.2\\RealVideo-FakeAudio\\Asian (East)\\men\\id06467\\00010_fake.mp4",
+      "identity": "id06467",
+      "category": "RealVideo-FakeAudio",
+      "label": 1,
+      "dataset": "FakeAVCeleb"
+    },
+    {
+      "video_path": "D:\\Temporal-Spectral\\dataset\\FakeAVCeleb_v1.2\\FakeAVCeleb_v1.2\\FakeVideo-FakeAudio\\African\\women\\id03747\\00273_id00220_wavtolip.mp4",
+      "identity": "id03747",
+      "category": "FakeVideo-FakeAudio",
+      "label": 1,
+      "dataset": "FakeAVCeleb"
+    },
+    {
+      "video_path": "D:\\Temporal-Spectral\\dataset\\FakeAVCeleb_v1.2\\FakeAVCeleb_v1.2\\RealVideo-FakeAudio\\African\\women\\id05106\\00078_fake.mp4",
+      "identity": "id05106",
+      "category": "RealVideo-FakeAudio",
+      "label": 1,
+      "dataset": "FakeAVCeleb"
+    },
+    {
+      "video_path": "D:\\Temporal-Spectral\\dataset\\FakeAVCeleb_v1.2\\FakeAVCeleb_v1.2\\FakeVideo-RealAudio\\Asian (East)\\women\\id05576\\00368_id06066_9e5vgpwmruA.mp4",
+      "identity": "id05576",
+      "category": "FakeVideo-RealAudio",
+      "label": 1,
+      "dataset": "FakeAVCeleb"
+    },
+    {
+      "video_path": "D:\\Temporal-Spectral\\dataset\\FakeAVCeleb_v1.2\\FakeAVCeleb_v1.2\\RealVideo-FakeAudio\\Caucasian (European)\\men\\id00055\\00120_fake.mp4",
+      "identity": "id00055",
+      "category": "RealVideo-FakeAudio",
+      "label": 1,
+      "dataset": "FakeAVCeleb"
+    },
+    {
+      "video_path": "D:\\Temporal-Spectral\\dataset\\FakeAVCeleb_v1.2\\FakeAVCeleb_v1.2\\RealVideo-FakeAudio\\Caucasian (American)\\men\\id00971\\00253_fake.mp4",
+      "identity": "id00971",
+      "category": "RealVideo-FakeAudio",
+      "label": 1,
+      "dataset": "FakeAVCeleb"
+    },
+    {
+      "video_path": "D:\\Temporal-Spectral\\dataset\\FakeAVCeleb_v1.2\\FakeAVCeleb_v1.2\\FakeVideo-RealAudio\\Caucasian (European)\\women\\id03858\\00092_id03844_AEAEN1Lns2c.mp4",
+      "identity": "id03858",
+      "category": "FakeVideo-RealAudio",
+      "label": 1,
+      "dataset": "FakeAVCeleb"
+    },
+    {
+      "video_path": "D:\\Temporal-Spectral\\dataset\\FakeAVCeleb_v1.2\\FakeAVCeleb_v1.2\\RealVideo-RealAudio\\African\\women\\id03747\\00273.mp4",
+      "identity": "id03747",
+      "category": "RealVideo-RealAudio",
+      "label": 0,
+      "dataset": "FakeAVCeleb"
+    },
+    {
+      "video_path": "D:\\Temporal-Spectral\\dataset\\FakeAVCeleb_v1.2\\FakeAVCeleb_v1.2\\RealVideo-RealAudio\\Caucasian (European)\\women\\id03858\\00092.mp4",
+      "identity": "id03858",
+      "category": "RealVideo-RealAudio",
+      "label": 0,
+      "dataset": "FakeAVCeleb"
+    },
+    {
+      "video_path": "D:\\Temporal-Spectral\\dataset\\FakeAVCeleb_v1.2\\FakeAVCeleb_v1.2\\RealVideo-RealAudio\\Caucasian (American)\\men\\id00971\\00253.mp4",
+      "identity": "id00971",
+      "category": "RealVideo-RealAudio",
+      "label": 0,
+      "dataset": "FakeAVCeleb"
+    },
+    {
+      "video_path": "D:\\Temporal-Spectral\\dataset\\FakeAVCeleb_v1.2\\FakeAVCeleb_v1.2\\RealVideo-FakeAudio\\African\\men\\id02494\\00050_fake.mp4",
+      "identity": "id02494",
+      "category": "RealVideo-FakeAudio",
+      "label": 1,
+      "dataset": "FakeAVCeleb"
+    },
+    {
+      "video_path": "D:\\Temporal-Spectral\\dataset\\FakeAVCeleb_v1.2\\FakeAVCeleb_v1.2\\FakeVideo-FakeAudio\\Asian (East)\\men\\id05479\\05479_id08613_wavtolip.mp4",
+      "identity": "id05479",
+      "category": "FakeVideo-FakeAudio",
+      "label": 1,
+      "dataset": "FakeAVCeleb"
+    },
+    {
+      "video_path": "D:\\Temporal-Spectral\\dataset\\FakeAVCeleb_v1.2\\FakeAVCeleb_v1.2\\RealVideo-RealAudio\\Asian (East)\\men\\id06467\\00010.mp4",
+      "identity": "id06467",
+      "category": "RealVideo-RealAudio",
+      "label": 0,
+      "dataset": "FakeAVCeleb"
+    },
+    {
+      "video_path": "D:\\Temporal-Spectral\\dataset\\FakeAVCeleb_v1.2\\FakeAVCeleb_v1.2\\RealVideo-RealAudio\\Caucasian (American)\\women\\id00575\\00092.mp4",
+      "identity": "id00575",
+      "category": "RealVideo-RealAudio",
+      "label": 0,
+      "dataset": "FakeAVCeleb"
+    },
+    {
+      "video_path": "D:\\Temporal-Spectral\\dataset\\FakeAVCeleb_v1.2\\FakeAVCeleb_v1.2\\FakeVideo-FakeAudio\\Asian (South)\\women\\id00417\\00069_id01026_wavtolip.mp4",
+      "identity": "id00417",
+      "category": "FakeVideo-FakeAudio",
+      "label": 1,
+      "dataset": "FakeAVCeleb"
+    },
+    {
+      "video_path": "D:\\Temporal-Spectral\\dataset\\FakeAVCeleb_v1.2\\FakeAVCeleb_v1.2\\RealVideo-RealAudio\\Asian (East)\\men\\id05479\\05479.mp4",
+      "identity": "id05479",
+      "category": "RealVideo-RealAudio",
+      "label": 0,
+      "dataset": "FakeAVCeleb"
+    },
+    {
+      "video_path": "D:\\Temporal-Spectral\\dataset\\FakeAVCeleb_v1.2\\FakeAVCeleb_v1.2\\RealVideo-RealAudio\\Asian (East)\\women\\id05576\\00368.mp4",
+      "identity": "id05576",
+      "category": "RealVideo-RealAudio",
+      "label": 0,
+      "dataset": "FakeAVCeleb"
+    }
+  ],
+  "test": [
+    {
+      "video_path": "D:\\Temporal-Spectral\\dataset\\FakeAVCeleb_v1.2\\FakeAVCeleb_v1.2\\RealVideo-RealAudio\\Asian (East)\\women\\id06061\\00002.mp4",
+      "identity": "id06061",
+      "category": "RealVideo-RealAudio",
+      "label": 0,
+      "dataset": "FakeAVCeleb"
+    },
+    {
+      "video_path": "D:\\Temporal-Spectral\\dataset\\FakeAVCeleb_v1.2\\FakeAVCeleb_v1.2\\FakeVideo-FakeAudio\\Caucasian (American)\\women\\id00752\\00340_id00381_wavtolip.mp4",
+      "identity": "id00752",
+      "category": "FakeVideo-FakeAudio",
+      "label": 1,
+      "dataset": "FakeAVCeleb"
+    },
+    {
+      "video_path": "D:\\Temporal-Spectral\\dataset\\FakeAVCeleb_v1.2\\FakeAVCeleb_v1.2\\RealVideo-RealAudio\\Caucasian (American)\\women\\id00752\\00340.mp4",
+      "identity": "id00752",
+      "category": "RealVideo-RealAudio",
+      "label": 0,
+      "dataset": "FakeAVCeleb"
+    },
+    {
+      "video_path": "D:\\Temporal-Spectral\\dataset\\FakeAVCeleb_v1.2\\FakeAVCeleb_v1.2\\FakeVideo-RealAudio\\Caucasian (American)\\women\\id00418\\00052_id01004_867Wlj7Gw68.mp4",
+      "identity": "id00418",
+      "category": "FakeVideo-RealAudio",
+      "label": 1,
+      "dataset": "FakeAVCeleb"
+    },
+    {
+      "video_path": "D:\\Temporal-Spectral\\dataset\\FakeAVCeleb_v1.2\\FakeAVCeleb_v1.2\\RealVideo-RealAudio\\Caucasian (European)\\women\\id00395\\00420.mp4",
+      "identity": "id00395",
+      "category": "RealVideo-RealAudio",
+      "label": 0,
+      "dataset": "FakeAVCeleb"
+    },
+    {
+      "video_path": "D:\\Temporal-Spectral\\dataset\\FakeAVCeleb_v1.2\\FakeAVCeleb_v1.2\\FakeVideo-FakeAudio\\Caucasian (European)\\women\\id00395\\00420_id00328_wavtolip.mp4",
+      "identity": "id00395",
+      "category": "FakeVideo-FakeAudio",
+      "label": 1,
+      "dataset": "FakeAVCeleb"
+    },
+    {
+      "video_path": "D:\\Temporal-Spectral\\dataset\\FakeAVCeleb_v1.2\\FakeAVCeleb_v1.2\\FakeVideo-RealAudio\\Asian (East)\\women\\id06061\\00002_id06462_wavtolip.mp4",
+      "identity": "id06061",
+      "category": "FakeVideo-RealAudio",
+      "label": 1,
+      "dataset": "FakeAVCeleb"
+    },
+    {
+      "video_path": "D:\\Temporal-Spectral\\dataset\\FakeAVCeleb_v1.2\\FakeAVCeleb_v1.2\\FakeVideo-FakeAudio\\African\\men\\id01076\\00005_id01207_wavtolip.mp4",
+      "identity": "id01076",
+      "category": "FakeVideo-FakeAudio",
+      "label": 1,
+      "dataset": "FakeAVCeleb"
+    },
+    {
+      "video_path": "D:\\Temporal-Spectral\\dataset\\FakeAVCeleb_v1.2\\FakeAVCeleb_v1.2\\RealVideo-RealAudio\\Caucasian (American)\\women\\id00100\\00028.mp4",
+      "identity": "id00100",
+      "category": "RealVideo-RealAudio",
+      "label": 0,
+      "dataset": "FakeAVCeleb"
+    },
+    {
+      "video_path": "D:\\Temporal-Spectral\\dataset\\FakeAVCeleb_v1.2\\FakeAVCeleb_v1.2\\RealVideo-RealAudio\\Caucasian (American)\\men\\id00943\\00304.mp4",
+      "identity": "id00943",
+      "category": "RealVideo-RealAudio",
+      "label": 0,
+      "dataset": "FakeAVCeleb"
+    },
+    {
+      "video_path": "D:\\Temporal-Spectral\\dataset\\FakeAVCeleb_v1.2\\FakeAVCeleb_v1.2\\RealVideo-FakeAudio\\Asian (South)\\men\\id03945\\00063_fake.mp4",
+      "identity": "id03945",
+      "category": "RealVideo-FakeAudio",
+      "label": 1,
+      "dataset": "FakeAVCeleb"
+    },
+    {
+      "video_path": "D:\\Temporal-Spectral\\dataset\\FakeAVCeleb_v1.2\\FakeAVCeleb_v1.2\\RealVideo-RealAudio\\African\\men\\id01076\\00005.mp4",
+      "identity": "id01076",
+      "category": "RealVideo-RealAudio",
+      "label": 0,
+      "dataset": "FakeAVCeleb"
+    },
+    {
+      "video_path": "D:\\Temporal-Spectral\\dataset\\FakeAVCeleb_v1.2\\FakeAVCeleb_v1.2\\RealVideo-RealAudio\\Asian (South)\\women\\id06254\\00043.mp4",
+      "identity": "id06254",
+      "category": "RealVideo-RealAudio",
+      "label": 0,
+      "dataset": "FakeAVCeleb"
+    },
+    {
+      "video_path": "D:\\Temporal-Spectral\\dataset\\FakeAVCeleb_v1.2\\FakeAVCeleb_v1.2\\RealVideo-RealAudio\\Asian (South)\\men\\id03945\\00063.mp4",
+      "identity": "id03945",
+      "category": "RealVideo-RealAudio",
+      "label": 0,
+      "dataset": "FakeAVCeleb"
+    },
+    {
+      "video_path": "D:\\Temporal-Spectral\\dataset\\FakeAVCeleb_v1.2\\FakeAVCeleb_v1.2\\RealVideo-FakeAudio\\Caucasian (American)\\men\\id00945\\00107_fake.mp4",
+      "identity": "id00945",
+      "category": "RealVideo-FakeAudio",
+      "label": 1,
+      "dataset": "FakeAVCeleb"
+    },
+    {
+      "video_path": "D:\\Temporal-Spectral\\dataset\\FakeAVCeleb_v1.2\\FakeAVCeleb_v1.2\\RealVideo-RealAudio\\Asian (East)\\women\\id00363\\00014.mp4",
+      "identity": "id00363",
+      "category": "RealVideo-RealAudio",
+      "label": 0,
+      "dataset": "FakeAVCeleb"
+    },
+    {
+      "video_path": "D:\\Temporal-Spectral\\dataset\\FakeAVCeleb_v1.2\\FakeAVCeleb_v1.2\\RealVideo-RealAudio\\Caucasian (American)\\women\\id00458\\00072.mp4",
+      "identity": "id00458",
+      "category": "RealVideo-RealAudio",
+      "label": 0,
+      "dataset": "FakeAVCeleb"
+    },
+    {
+      "video_path": "D:\\Temporal-Spectral\\dataset\\FakeAVCeleb_v1.2\\FakeAVCeleb_v1.2\\FakeVideo-FakeAudio\\Asian (South)\\men\\id04928\\00027_id00732_amGRpH0AJCs_id04601_wavtolip.mp4",
+      "identity": "id04928",
+      "category": "FakeVideo-FakeAudio",
+      "label": 1,
+      "dataset": "FakeAVCeleb"
+    },
+    {
+      "video_path": "D:\\Temporal-Spectral\\dataset\\FakeAVCeleb_v1.2\\FakeAVCeleb_v1.2\\RealVideo-RealAudio\\Caucasian (American)\\women\\id00418\\00052.mp4",
+      "identity": "id00418",
+      "category": "RealVideo-RealAudio",
+      "label": 0,
+      "dataset": "FakeAVCeleb"
+    },
+    {
+      "video_path": "D:\\Temporal-Spectral\\dataset\\FakeAVCeleb_v1.2\\FakeAVCeleb_v1.2\\RealVideo-FakeAudio\\Asian (East)\\women\\id00363\\00014_fake.mp4",
+      "identity": "id00363",
+      "category": "RealVideo-FakeAudio",
+      "label": 1,
+      "dataset": "FakeAVCeleb"
+    },
+    {
+      "video_path": "D:\\Temporal-Spectral\\dataset\\FakeAVCeleb_v1.2\\FakeAVCeleb_v1.2\\RealVideo-RealAudio\\Asian (South)\\men\\id04928\\00027.mp4",
+      "identity": "id04928",
+      "category": "RealVideo-RealAudio",
+      "label": 0,
+      "dataset": "FakeAVCeleb"
+    },
+    {
+      "video_path": "D:\\Temporal-Spectral\\dataset\\FakeAVCeleb_v1.2\\FakeAVCeleb_v1.2\\FakeVideo-RealAudio\\Caucasian (American)\\women\\id00100\\00028_3.mp4",
+      "identity": "id00100",
+      "category": "FakeVideo-RealAudio",
+      "label": 1,
+      "dataset": "FakeAVCeleb"
+    },
+    {
+      "video_path": "D:\\Temporal-Spectral\\dataset\\FakeAVCeleb_v1.2\\FakeAVCeleb_v1.2\\FakeVideo-RealAudio\\African\\women\\id01661\\00059_id02071_cHuDh9F87vA.mp4",
+      "identity": "id01661",
+      "category": "FakeVideo-RealAudio",
+      "label": 1,
+      "dataset": "FakeAVCeleb"
+    },
+    {
+      "video_path": "D:\\Temporal-Spectral\\dataset\\FakeAVCeleb_v1.2\\FakeAVCeleb_v1.2\\RealVideo-RealAudio\\Asian (South)\\women\\id06232\\00025.mp4",
+      "identity": "id06232",
+      "category": "RealVideo-RealAudio",
+      "label": 0,
+      "dataset": "FakeAVCeleb"
+    },
+    {
+      "video_path": "D:\\Temporal-Spectral\\dataset\\FakeAVCeleb_v1.2\\FakeAVCeleb_v1.2\\RealVideo-FakeAudio\\Asian (South)\\women\\id06232\\00025_fake.mp4",
+      "identity": "id06232",
+      "category": "RealVideo-FakeAudio",
+      "label": 1,
+      "dataset": "FakeAVCeleb"
+    },
+    {
+      "video_path": "D:\\Temporal-Spectral\\dataset\\FakeAVCeleb_v1.2\\FakeAVCeleb_v1.2\\FakeVideo-RealAudio\\Caucasian (American)\\men\\id00943\\00304_id00021_6uNNej-JZ-c.mp4",
+      "identity": "id00943",
+      "category": "FakeVideo-RealAudio",
+      "label": 1,
+      "dataset": "FakeAVCeleb"
+    },
+    {
+      "video_path": "D:\\Temporal-Spectral\\dataset\\FakeAVCeleb_v1.2\\FakeAVCeleb_v1.2\\RealVideo-RealAudio\\African\\women\\id01661\\00059.mp4",
+      "identity": "id01661",
+      "category": "RealVideo-RealAudio",
+      "label": 0,
+      "dataset": "FakeAVCeleb"
+    },
+    {
+      "video_path": "D:\\Temporal-Spectral\\dataset\\FakeAVCeleb_v1.2\\FakeAVCeleb_v1.2\\RealVideo-FakeAudio\\Caucasian (American)\\women\\id00458\\00072_fake.mp4",
+      "identity": "id00458",
+      "category": "RealVideo-FakeAudio",
+      "label": 1,
+      "dataset": "FakeAVCeleb"
+    },
+    {
+      "video_path": "D:\\Temporal-Spectral\\dataset\\FakeAVCeleb_v1.2\\FakeAVCeleb_v1.2\\RealVideo-RealAudio\\Caucasian (American)\\men\\id00945\\00107.mp4",
+      "identity": "id00945",
+      "category": "RealVideo-RealAudio",
+      "label": 0,
+      "dataset": "FakeAVCeleb"
+    },
+    {
+      "video_path": "D:\\Temporal-Spectral\\dataset\\FakeAVCeleb_v1.2\\FakeAVCeleb_v1.2\\FakeVideo-FakeAudio\\Asian (South)\\women\\id06254\\00043_id02310_wavtolip.mp4",
+      "identity": "id06254",
+      "category": "FakeVideo-FakeAudio",
+      "label": 1,
+      "dataset": "FakeAVCeleb"
+    }
+  ]
+}

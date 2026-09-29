@@ -1,0 +1,92 @@
+{
+  "fakeavceleb": {
+    "total_records": 21566,
+    "type_counts": {
+      "RealVideo-RealAudio": 500,
+      "RealVideo-FakeAudio": 500,
+      "FakeVideo-RealAudio": 9709,
+      "FakeVideo-FakeAudio": 10857
+    },
+    "unique_identities": 500,
+    "sample_properties": [
+      {
+        "path": "D:\\Temporal-Spectral\\dataset\\FakeAVCeleb_v1.2\\FakeAVCeleb_v1.2\\RealVideo-RealAudio\\African\\men\\id00076\\00109.mp4",
+        "type": "RealVideo-RealAudio",
+        "resolution": "224x224",
+        "fps": 25.0,
+        "frames": 251,
+        "duration_sec": 10.04
+      },
+      {
+        "path": "D:\\Temporal-Spectral\\dataset\\FakeAVCeleb_v1.2\\FakeAVCeleb_v1.2\\RealVideo-RealAudio\\African\\men\\id00166\\00010.mp4",
+        "type": "RealVideo-RealAudio",
+        "resolution": "224x224",
+        "fps": 25.0,
+        "frames": 160,
+        "duration_sec": 6.4
+      },
+      {
+        "path": "D:\\Temporal-Spectral\\dataset\\FakeAVCeleb_v1.2\\FakeAVCeleb_v1.2\\RealVideo-RealAudio\\African\\men\\id00173\\00118.mp4",
+        "type": "RealVideo-RealAudio",
+        "resolution": "224x224",
+        "fps": 25.0,
+        "frames": 149,
+        "duration_sec": 5.96
+      },
+      {
+        "path": "D:\\Temporal-Spectral\\dataset\\FakeAVCeleb_v1.2\\FakeAVCeleb_v1.2\\RealVideo-RealAudio\\African\\men\\id00366\\00118.mp4",
+        "type": "RealVideo-RealAudio",
+        "resolution": "224x224",
+        "fps": 25.0,
+        "frames": 224,
+        "duration_sec": 8.96
+      },
+      {
+        "path": "D:\\Temporal-Spectral\\dataset\\FakeAVCeleb_v1.2\\FakeAVCeleb_v1.2\\RealVideo-RealAudio\\African\\men\\id00391\\00052.mp4",
+        "type": "RealVideo-RealAudio",
+        "resolution": "224x224",
+        "fps": 25.0,
+        "frames": 300,
+        "duration_sec": 12.0
+      }
+    ]
+  },
+  "uadfv": {
+    "real_count": 49,
+    "fake_count": 49,
+    "sample_properties": [
+      {
+        "file": "0000.mp4",
+        "label": "REAL",
+        "resolution": "288x316",
+        "fps": 30.0,
+        "frames": 292,
+        "duration_sec": 9.73
+      },
+      {
+        "file": "0001.mp4",
+        "label": "REAL",
+        "resolution": "436x500",
+        "fps": 30.0,
+        "frames": 192,
+        "duration_sec": 6.4
+      },
+      {
+        "file": "0000_fake.mp4",
+        "label": "FAKE",
+        "resolution": "288x316",
+        "fps": 30.0,
+        "frames": 292,
+        "duration_sec": 9.73
+      },
+      {
+        "file": "0001_fake.mp4",
+        "label": "FAKE",
+        "resolution": "436x500",
+        "fps": 30.0,
+        "frames": 192,
+        "duration_sec": 6.4
+      }
+    ]
+  }
+}
