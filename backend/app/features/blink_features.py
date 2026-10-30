@@ -90,22 +90,17 @@ class BlinkAnalyzer:
 
         # Forensic anomaly score:
         # Healthy human blink rate is typically 12-25 blinks/min.
-        # Deepfakes often have 0 blinks with near-zero EAR variance (frozen eyes).
-        if duration_sec >= 4.0:
-            if blink_rate_per_min < 1.0 and ear_variance < 0.00015:
-                blink_anomaly = 0.85  # Frozen eyes over long duration (strong deepfake indicator)
-            elif blink_rate_per_min < 2.0:
-                blink_anomaly = 0.50 if ear_variance < 0.0003 else 0.25
-            elif blink_rate_per_min > 45.0:
-                blink_anomaly = 0.70  # Abnormally rapid/erratic blinking
-            else:
-                blink_anomaly = 0.15  # Normal human blink range
+        # Deepfakes often have 0 blinks with near-zero EAR variance (frozen eyes) or erratic flickering.
+        if duration_sec >= 3.5:
+            frozen_factor = float(1.0 / (1.0 + np.exp(np.clip(30000.0 * (ear_variance - 0.00018), -50.0, 50.0))))
+            rate_low_factor = float(1.0 / (1.0 + np.exp(np.clip(1.5 * (blink_rate_per_min - 3.0), -50.0, 50.0))))
+            rate_high_factor = float(1.0 / (1.0 + np.exp(np.clip(-0.25 * (blink_rate_per_min - 40.0), -50.0, 50.0))))
+            combined_factor = max(frozen_factor * rate_low_factor, rate_high_factor)
+            blink_anomaly = float(np.clip(0.12 + 0.76 * combined_factor, 0.06, 0.94))
         else:
-            # Short clip (< 4 seconds): humans naturally might not blink in 2-3s
-            if ear_variance < 0.0001 and blink_count == 0:
-                blink_anomaly = 0.72  # Completely static, unnaturally rigid eye landmarks
-            else:
-                blink_anomaly = 0.18  # Normal eye dynamics in short sample
+            # Short clip (< 3.5 seconds): humans naturally might not blink in 2-3s
+            frozen_factor = float(1.0 / (1.0 + np.exp(np.clip(35000.0 * (ear_variance - 0.00012), -50.0, 50.0))))
+            blink_anomaly = float(np.clip(0.14 + 0.70 * frozen_factor, 0.08, 0.90))
 
         return {
             "ear_seq": [round(float(e), 4) for e in ear_list],

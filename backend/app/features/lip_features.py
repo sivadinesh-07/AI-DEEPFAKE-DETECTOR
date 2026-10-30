@@ -55,14 +55,12 @@ class LipAnalyzer:
         mar_variance = float(np.var(mar_arr)) if len(mar_arr) > 0 else 0.0
         max_velocity = float(np.max(np.abs(velocities))) if len(velocities) > 0 else 0.0
 
-        # Anomaly detection: Wav2Lip and SadTalker often produce unnatural sudden jerky lip motions (high velocity)
-        # or completely static robotic mouth shapes during speech.
-        if max_velocity > 0.45:
-            lip_anomaly = 0.88  # Unnatural boundary snapping/flicker
-        elif mar_variance < 0.0001:
-            lip_anomaly = 0.72  # Unnatural frozen mouth
-        else:
-            lip_anomaly = 0.18  # Smooth organic articulatory transition
+        # Anomaly detection: Smooth continuous biological articulatory transitions
+        # Jerky snap anomalies vs completely frozen mouth
+        velocity_factor = float(1.0 / (1.0 + np.exp(np.clip(-12.0 * (max_velocity - 0.38), -50.0, 50.0))))
+        frozen_factor = float(1.0 / (1.0 + np.exp(np.clip(30000.0 * (mar_variance - 0.00015), -50.0, 50.0))))
+        combined_anomaly = max(velocity_factor, frozen_factor)
+        lip_anomaly = float(np.clip(0.12 + 0.76 * combined_anomaly, 0.05, 0.95))
 
         return {
             "mar_seq": [round(float(m), 4) for m in mar_list],

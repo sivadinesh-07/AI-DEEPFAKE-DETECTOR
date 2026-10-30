@@ -1,9 +1,20 @@
 import axios from 'axios';
 import type { AnalysisResult, JobStatus, HistoryResponse } from '../types/analysis';
 
+const rawEnvUrl = (import.meta.env.VITE_API_BASE_URL || '').trim().replace(/\/+$/, '');
+
+export const API_BASE_URL = rawEnvUrl ? `${rawEnvUrl}/api/v1` : '/api/v1';
+
+export const getEndpointDisplayUrl = (): string => {
+  if (rawEnvUrl) {
+    return `${rawEnvUrl}/api/v1`;
+  }
+  return 'http://127.0.0.1:8000/api/v1';
+};
+
 const apiClient = axios.create({
-  baseURL: '/api/v1',
-  timeout: 30000,
+  baseURL: API_BASE_URL,
+  timeout: 60000,
   headers: {
     'Accept': 'application/json',
   },
@@ -49,8 +60,8 @@ export const api = {
   async checkHealth(): Promise<{ online: boolean; latencyMs?: number; data?: any }> {
     const start = performance.now();
     try {
-      const response = await axios.get('/api/v1/health', {
-        timeout: 3000,
+      const response = await axios.get(`${API_BASE_URL}/health`, {
+        timeout: 5000,
         headers: { 'Cache-Control': 'no-cache' }
       });
       const latencyMs = Math.round(performance.now() - start);
@@ -110,6 +121,6 @@ export const api = {
 
   // Download PDF Report
   getReportUrl(analysisId: string): string {
-    return `/api/v1/analysis/${analysisId}/report`;
+    return `${API_BASE_URL}/analysis/${analysisId}/report`;
   }
 };

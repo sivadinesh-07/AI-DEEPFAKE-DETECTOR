@@ -2,107 +2,151 @@
 
 @layer base {
   :root {
-    --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    --font-sans: 'Plus Jakarta Sans', 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    --font-heading: 'Space Grotesk', 'Plus Jakarta Sans', sans-serif;
     --font-mono: 'JetBrains Mono', monospace;
 
-    /* Light Theme Palette: #D2FF72, #73EC8B, #54C392, #15B392 */
-    --color-lime: #D2FF72;
-    --color-mint: #73EC8B;
-    --color-emerald: #54C392;
-    --color-teal: #15B392;
+    /* Elite Cyber-Forensic Theme Palette */
+    --color-bg-base: #080c14;
+    --color-bg-surface: #0e1424;
+    --color-bg-elevated: #141c30;
+    --color-cyan: #00F0FF;
+    --color-sky: #38bdf8;
+    --color-emerald: #10b981;
+    --color-rose: #f43f5e;
+    --color-indigo: #6366f1;
   }
 
   body {
-    background-color: #f4faf6;
-    color: #0b2922;
+    background-color: #080c14;
+    color: #f1f5f9;
     font-family: var(--font-sans);
     min-height: 100vh;
     margin: 0;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4 {
+    letter-spacing: -0.025em;
   }
 }
 
-/* Forensic Background Grid Texture with Mint/Teal Grid Dots */
+/* Forensic Cyber Grid Dot Matrix */
 .bg-forensic-grid {
-  background-image: radial-gradient(rgba(21, 179, 146, 0.12) 1px, transparent 1px);
-  background-size: 28px 28px;
+  background-image: 
+    radial-gradient(rgba(56, 189, 248, 0.08) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(8, 12, 20, 0.4), rgba(8, 12, 20, 0.95));
+  background-size: 32px 32px, 100% 100%;
 }
 
-/* Glassmorphic Light Panels */
+/* Ultra-Crisp Cyber Glassmorphic Panels */
 .glass-panel {
-  background: rgba(255, 255, 255, 0.85);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(84, 195, 146, 0.28);
-  box-shadow: 0 10px 30px -10px rgba(21, 179, 146, 0.08), 0 1px 3px 0 rgba(0, 0, 0, 0.02);
+  background: rgba(14, 20, 36, 0.72);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 
+    0 20px 40px -15px rgba(0, 0, 0, 0.5),
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.08);
 }
 
-.glass-panel-subtle {
-  background: rgba(255, 255, 255, 0.65);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(84, 195, 146, 0.20);
+.glass-panel-glow {
+  background: linear-gradient(135deg, rgba(14, 20, 36, 0.85) 0%, rgba(10, 16, 28, 0.95) 100%);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(56, 189, 248, 0.2);
+  box-shadow: 
+    0 24px 50px -12px rgba(0, 240, 255, 0.08),
+    0 10px 20px -5px rgba(0, 0, 0, 0.5),
+    inset 0 1px 1px 0 rgba(255, 255, 255, 0.12);
 }
 
 .glass-card {
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(240, 251, 246, 0.90) 100%);
+  background: linear-gradient(135deg, rgba(20, 28, 48, 0.6) 0%, rgba(12, 17, 30, 0.75) 100%);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(84, 195, 146, 0.25);
-  box-shadow: 0 6px 20px -4px rgba(21, 179, 146, 0.07), 0 2px 6px -1px rgba(0, 0, 0, 0.03);
-  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  box-shadow: 
+    0 10px 30px -10px rgba(0, 0, 0, 0.4),
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.06);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .glass-card:hover {
-  border-color: rgba(21, 179, 146, 0.6);
-  box-shadow: 0 14px 30px -6px rgba(21, 179, 146, 0.16), 0 0 20px -2px rgba(115, 236, 139, 0.25);
+  border-color: rgba(56, 189, 248, 0.4);
+  box-shadow: 
+    0 16px 36px -8px rgba(0, 240, 255, 0.12),
+    0 0 25px -4px rgba(56, 189, 248, 0.15),
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.12);
   transform: translateY(-2px);
 }
 
-/* Luminous Glow Utilities */
-.glow-teal {
-  box-shadow: 0 0 24px -2px rgba(21, 179, 146, 0.35);
+/* Luminous Specular Glows */
+.glow-cyan {
+  box-shadow: 0 0 28px -4px rgba(0, 240, 255, 0.45);
 }
 
-.glow-mint {
-  box-shadow: 0 0 24px -2px rgba(115, 236, 139, 0.45);
-}
-
-.glow-lime {
-  box-shadow: 0 0 24px -2px rgba(210, 255, 114, 0.5);
+.glow-emerald {
+  box-shadow: 0 0 28px -4px rgba(16, 185, 129, 0.45);
 }
 
 .glow-rose {
-  box-shadow: 0 0 24px -2px rgba(244, 63, 94, 0.35);
+  box-shadow: 0 0 28px -4px rgba(244, 63, 94, 0.45);
 }
 
-/* Custom Forensic Scrollbar */
+.glow-indigo {
+  box-shadow: 0 0 28px -4px rgba(99, 102, 241, 0.45);
+}
+
+/* Modern Dark Cyber Scrollbar */
 ::-webkit-scrollbar {
   width: 6px;
   height: 6px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #f0f8f4;
+  background: #080c14;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #73EC8B;
+  background: #1e293b;
   border-radius: 9999px;
-  border: 1px solid rgba(84, 195, 146, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #15B392;
+  background: #38bdf8;
+}
+
+/* Radar Scanline Animation */
+@keyframes radar-scan {
+  0% { transform: translateY(-100%); opacity: 0; }
+  50% { opacity: 0.8; }
+  100% { transform: translateY(100%); opacity: 0; }
+}
+
+.animate-radar-scan {
+  animation: radar-scan 3.5s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 }
 
 /* Subtle Pulse */
 @keyframes pulse-subtle {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0.6; }
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.8; transform: scale(1.02); }
 }
 
 .animate-pulse-subtle {
   animation: pulse-subtle 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Fade In */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }

@@ -181,7 +181,7 @@ class ForensicInferencePipeline:
         report("temporal_analysis", 68)
         temp_seq = torch.cat([spatial_seq, feat_f_matrix], dim=-1).unsqueeze(0)  # (1, T, 1872)
         with torch.no_grad():
-            temp_logits, feat_t, _ = self.temporal_model(temp_seq)
+            temp_logits, feat_t, tm_frame_anom = self.temporal_model(temp_seq)
             temporal_score = float(torch.sigmoid(temp_logits).squeeze().item())
 
         report("audio_analysis", 78)
@@ -201,37 +201,88 @@ class ForensicInferencePipeline:
             sync_status = self.sync_model.compute_sync_status(sync_score)
 
         report("multimodal_fusion", 92)
-        # Extract features for calibrated multi-modal ensemble
+        # Extract features matching calibrated multi-stream ensemble
         fv_np = feat_v.squeeze(0).cpu().numpy()
         temp_seq_np = temp_seq.squeeze(0).cpu().numpy()  # (T, 1872)
-        seq_m = temp_seq_np[:, :1856].mean(axis=0)
-        seq_s = temp_seq_np[:, :1856].std(axis=0)
+        seq_spatial = temp_seq_np[:, :1792]
+        temp_m = np.mean(seq_spatial, axis=0)
+        temp_s = np.std(seq_spatial, axis=0)
+        spectral_emb = fv_np[1792:1856]
         f_bio_np = temp_seq_np[:, 1856:].mean(axis=0)
-        ear_var = float(np.var(temp_seq_np[:, 1856]))
-        mar_var = float(np.var(temp_seq_np[:, 1860]))
-        gaze_var = float(np.var(temp_seq_np[:, 1861]))
-        spec_ratio = float(fv_np[1792 + 32 :].mean() / (fv_np[1792 : 1792 + 16].mean() + 1e-6))
 
-        vis_vec = np.concatenate([fv_np, seq_m, seq_s, f_bio_np, [ear_var, mar_var, spec_ratio]])
+        low_f = float(np.mean(spectral_emb[:16]) + 1e-6)
+        high_f = float(np.mean(spectral_emb[32:]) + 1e-6)
+        spec_ratio = float(high_f / low_f)
+        spec_std = float(np.std(spectral_emb))
+        spec_energy = float(np.sum(spectral_emb ** 2))
+
+        diffs = np.diff(seq_spatial, axis=0)
+        frame_velocity = float(np.mean(np.linalg.norm(diffs, axis=1)))
+        frame_accel = float(np.std(np.linalg.norm(diffs, axis=1)))
+
+        ear_seq = temp_seq_np[:, 1856]
+        mar_seq = temp_seq_np[:, 1860]
+        gaze_seq = temp_seq_np[:, 1861]
+        ear_mean = float(np.mean(ear_seq))
+        ear_var = float(np.var(ear_seq))
+        mar_mean = float(np.mean(mar_seq))
+        mar_var = float(np.var(mar_seq))
+        mar_velocity = float(np.mean(np.abs(np.diff(mar_seq)))) if len(mar_seq) > 1 else 0.0
+        gaze_var = float(np.var(gaze_seq))
+        gaze_step = float(np.mean(np.abs(np.diff(gaze_seq)))) if len(gaze_seq) > 1 else 0.0
+        has_a_float = 1.0 if audio_res["has_audio"] else 0.0
+
+        phys_bio = np.array([
+            spec_ratio, spec_std, spec_energy,
+            frame_velocity, frame_accel,
+            ear_mean, ear_var,
+            mar_mean, mar_var, mar_velocity,
+            gaze_var, gaze_step,
+            has_a_float
+        ])
+
+        vis_vec = np.concatenate([
+            temp_m[:512],
+            temp_s[:512],
+            spectral_emb,
+            f_bio_np,
+            phys_bio
+        ])
         aud_vec = feat_a.squeeze(0).cpu().numpy()
 
         if self.ensemble is not None:
             p_vis = float(self.ensemble["visual_model"].predict_proba([vis_vec])[0, 1])
-            spatial_score = p_vis
-            temporal_score = float(np.clip(p_vis * 0.85 + (seq_s.mean() * 0.5), 0.04, 0.96))
-
-            if audio_res["has_audio"] and audio_res.get("duration", 0) >= 1.0:
+            if audio_res["has_audio"] and audio_res.get("duration", 0) >= 0.5:
                 p_aud = float(self.ensemble["audio_model"].predict_proba([aud_vec])[0, 1])
                 audio_score = p_aud
-                prob_fake = 1.0 - (1.0 - p_vis) * (1.0 - p_aud)
             else:
                 p_aud = 0.0
-                audio_score = 0.05
-                prob_fake = p_vis
+                audio_score = 0.04
 
-            prob_fake = float(np.clip(prob_fake, 0.02, 0.98))
-            confidence = prob_fake if prob_fake >= 0.50 else (1.0 - prob_fake)
-            prediction = "FAKE" if prob_fake >= 0.50 else "REAL"
+            # Calibrated Meta-Classifier
+            if "meta_model" in self.ensemble and "meta_scaler" in self.ensemble:
+                meta_feat = np.array([[
+                    p_vis,
+                    p_aud,
+                    spatial_score,
+                    temporal_score,
+                    sync_score,
+                    spec_ratio,
+                    has_a_float,
+                    max(p_vis, p_aud),
+                    p_vis * p_aud,
+                    abs(p_vis - p_aud)
+                ]])
+                meta_feat_s = self.ensemble["meta_scaler"].transform(meta_feat)
+                prob_fake = float(self.ensemble["meta_model"].predict_proba(meta_feat_s)[0, 1])
+            else:
+                prob_fake = p_vis if not audio_res["has_audio"] else float(np.clip(0.6 * p_vis + 0.4 * p_aud, 0.02, 0.98))
+
+            threshold = float(self.ensemble.get("threshold", 0.50))
+            prob_fake = float(np.clip(prob_fake, 0.01, 0.99))
+            confidence = prob_fake if prob_fake >= threshold else (1.0 - prob_fake)
+            prediction = "FAKE" if prob_fake >= threshold else "REAL"
+            spatial_score = float(np.clip(0.70 * p_vis + 0.30 * spatial_score, 0.02, 0.98))
         else:
             with torch.no_grad():
                 logits, probs, modality_weights = self.fusion_model(feat_v, feat_t, feat_a, feat_s, feat_f, has_audio)
@@ -239,11 +290,13 @@ class ForensicInferencePipeline:
                 confidence = prob_fake if prob_fake >= 0.5 else (1.0 - prob_fake)
                 prediction = "FAKE" if prob_fake >= 0.5 else "REAL"
 
-        # Frame anomalies: calibrated to frame spatial and frequency representations
+        # Frame anomalies: calibrated combining spatial and temporal sequence scores
         with torch.no_grad():
             frame_spatial_logits = self.spatial_model.classifier(spatial_seq)
             frame_spatial_probs = torch.sigmoid(frame_spatial_logits).squeeze(-1).cpu().numpy()
-            frame_anomalies = np.clip(0.65 * frame_spatial_probs + 0.35 * spatial_score, 0.02, 0.98).tolist()
+            tm_frame_anom_np = tm_frame_anom.squeeze(0).cpu().numpy()
+            combined_frame_scores = 0.50 * frame_spatial_probs + 0.35 * tm_frame_anom_np + 0.15 * prob_fake
+            frame_anomalies = np.clip(combined_frame_scores, 0.02, 0.98).tolist()
 
         report("explainability_gradcam", 96)
         # Create directory for this analysis's frames

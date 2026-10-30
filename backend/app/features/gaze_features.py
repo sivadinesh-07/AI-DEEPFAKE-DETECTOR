@@ -20,7 +20,7 @@ class GazeAnalyzer:
         Horizontal: 0.0 (looking far left) to 1.0 (looking far right), ~0.5 is centered.
         """
         if landmarks is None or len(landmarks) < 468:
-            return {"left_h": 0.5, "left_v": 0.5, "right_h": 0.5, "right_v": 0.5}
+            return {"left_h": 0.5, "left_v": 0.5, "right_h": 0.5, "right_v": 0.5, "divergence": 0.0}
 
         # If iris landmarks (468-477) are present, use iris center (468 for left, 473 for right)
         if iris_landmarks is not None and len(iris_landmarks) >= 10:
@@ -41,11 +41,14 @@ class GazeAnalyzer:
 
         left_h = float(np.linalg.norm(left_pupil - l_outer) / l_width)
         right_h = float(np.linalg.norm(right_pupil - r_inner) / r_width)
+        divergence = float(abs(left_h - right_h))
 
         return {
             "left_h": round(left_h, 4),
+            "left_v": 0.5,
             "right_h": round(right_h, 4),
-            "divergence": round(abs(left_h - right_h), 4)
+            "right_v": 0.5,
+            "divergence": round(divergence, 4)
         }
 
     @classmethod
@@ -53,25 +56,33 @@ class GazeAnalyzer:
         """
         Computes temporal gaze stability and inter-ocular alignment anomaly score.
         """
+        if not landmark_seq:
+            return {
+                "mean_divergence": 0.0,
+                "gaze_variance": 0.0,
+                "gaze_anomaly_score": 0.5,
+                "gaze_seq": []
+            }
+
         divergences = []
         gaze_vectors = []
 
         for lms, iris in zip(landmark_seq, iris_seq):
             gaze = cls.compute_gaze_ratio(lms, iris)
-            divergences.append(gaze["divergence"])
-            gaze_vectors.append([gaze["left_h"], gaze["right_h"]])
+            div = float(gaze.get("divergence", abs(gaze.get("left_h", 0.5) - gaze.get("right_h", 0.5))))
+            divergences.append(div)
+            gaze_vectors.append([float(gaze.get("left_h", 0.5)), float(gaze.get("right_h", 0.5))])
 
         div_arr = np.array(divergences, dtype=np.float32)
         mean_div = float(np.mean(div_arr)) if len(div_arr) > 0 else 0.0
         gaze_variance = float(np.var(gaze_vectors)) if len(gaze_vectors) > 0 else 0.0
 
-        # Forensic anomaly: High divergence between left and right eye or unnatural static fixation (0 variance)
-        if mean_div > 0.35:
-            gaze_anomaly = 0.82  # Unnatural strabismus / eye desynchronization
-        elif gaze_variance < 0.0001:
-            gaze_anomaly = 0.70  # Completely unnatural frozen gaze
-        else:
-            gaze_anomaly = 0.20  # Coherent conjugate gaze
+        # Forensic anomaly: Continuous modeling of inter-ocular divergence and unnatural frozen/jittery fixation
+        div_factor = float(1.0 / (1.0 + np.exp(np.clip(-14.0 * (mean_div - 0.28), -50.0, 50.0))))
+        frozen_factor = float(1.0 / (1.0 + np.exp(np.clip(35000.0 * (gaze_variance - 0.00015), -50.0, 50.0))))
+        jitter_factor = float(1.0 / (1.0 + np.exp(np.clip(-120.0 * (gaze_variance - 0.02), -50.0, 50.0))))
+        combined_anomaly = max(div_factor, frozen_factor, jitter_factor)
+        gaze_anomaly = float(np.clip(0.12 + 0.76 * combined_anomaly, 0.05, 0.95))
 
         return {
             "mean_divergence": round(mean_div, 4),

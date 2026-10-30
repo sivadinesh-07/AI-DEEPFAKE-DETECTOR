@@ -96,49 +96,58 @@ export const Analysis: React.FC = () => {
   };
 
   return (
-    <div className="space-y-8 max-w-6xl mx-auto">
-      <div className="flex items-center justify-between">
+    <div className="space-y-8 max-w-6xl mx-auto animate-fadeIn">
+      {/* Workspace Header */}
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
         <div>
-          <h1 className="text-2xl font-extrabold text-[#0b2922] tracking-tight font-sans">
-            Forensic Analysis Workspace
-          </h1>
-          <p className="text-xs text-[#205347] mt-1">Deepfake detection, temporal-spectral inconsistency & biometric verification</p>
+          <div className="flex items-center space-x-2.5">
+            <h1 className="text-2xl font-black text-white tracking-tight font-heading">
+              Forensic Analysis Workspace
+            </h1>
+            <span className="px-2 py-0.5 rounded-full text-[10px] font-mono font-bold tracking-wider bg-cyan-950 text-cyan-300 border border-cyan-500/30">
+              PIPELINE v1.0
+            </span>
+          </div>
+          <p className="text-xs text-slate-400 mt-1">
+            Multimodal deepfake identification, spatial-spectral inconsistency extraction &amp; biometric verification
+          </p>
         </div>
+
         {result && (
           <button
             onClick={handleReset}
-            className="px-4 py-2.5 bg-white hover:bg-[#eef8f3] text-[#0b2922] rounded-xl text-xs font-semibold flex items-center space-x-2 transition-all border border-[#54C392]/35 shadow-xs cursor-pointer hover:border-[#15B392]/60"
+            className="px-4 py-2.5 bg-slate-900/90 hover:bg-slate-800 text-slate-200 hover:text-white rounded-xl text-xs font-semibold flex items-center space-x-2 transition-all border border-slate-700/80 shadow-md cursor-pointer hover:border-cyan-500/50"
           >
-            <RefreshCw className="w-3.5 h-3.5 text-[#15B392]" />
-            <span>Analyze Another Video</span>
+            <RefreshCw className="w-3.5 h-3.5 text-cyan-400" />
+            <span>Audit Another Video</span>
           </button>
         )}
       </div>
 
       {error && (
-        <div className="bg-rose-500/10 border border-rose-500/30 text-rose-400 p-4 rounded-2xl flex items-center space-x-3 text-xs">
-          <AlertTriangle className="w-5 h-5 shrink-0" />
+        <div className="bg-rose-500/10 border border-rose-500/30 text-rose-300 p-4 rounded-2xl flex items-center space-x-3 text-xs shadow-lg">
+          <AlertTriangle className="w-5 h-5 text-rose-400 shrink-0" />
           <span>{error}</span>
         </div>
       )}
 
       {/* Offline Alert when trying to analyze */}
       {!isOnline && status === 'idle' && !result && (
-        <div className="bg-rose-500/10 border border-rose-500/30 text-rose-300 p-4 rounded-2xl flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 text-xs shadow-lg">
+        <div className="bg-slate-900/90 border border-rose-500/30 text-rose-300 p-4 rounded-2xl flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 text-xs shadow-xl">
           <div className="flex items-center space-x-3">
             <div className="p-2 bg-rose-500/20 rounded-xl text-rose-400 shrink-0">
               <WifiOff className="w-5 h-5 animate-pulse" />
             </div>
             <div>
-              <p className="font-bold text-white text-sm">Backend Service Offline</p>
-              <p className="text-rose-300/80 mt-0.5">Video uploads and forensic inferences are paused until the server is running.</p>
+              <p className="font-bold text-white text-sm">Backend Engine Offline</p>
+              <p className="text-slate-300 text-[11px] mt-0.5">Video uploads and forensic inferences are paused until the FastAPI server is running.</p>
             </div>
           </div>
           <button
             onClick={() => checkHealth()}
             className="px-3.5 py-2 bg-rose-600 hover:bg-rose-500 text-white font-semibold rounded-xl shrink-0 transition-colors shadow-sm cursor-pointer"
           >
-            Check Status
+            Ping Server
           </button>
         </div>
       )}
