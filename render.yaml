@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: neural-forensics-backend
+    runtime: docker
+    dockerfilePath: ./Dockerfile
+    plan: standard # Standard or higher recommended for PyTorch CPU inference (2GB+ RAM)
+    healthCheckPath: /api/v1/health
+    envVars:
+      - key: PYTHONUNBUFFERED
+        value: "1"
+

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Download, Trash2, Eye, Search, Database } from 'lucide-react';
-import { api } from '../services/api';
+import { api, resolveMediaUrl } from '../services/api';
 import type { HistoryItem } from '../types/analysis';
 import { useBackendStatus } from '../context/BackendStatusContext';
 
@@ -158,7 +158,7 @@ export const History: React.FC = () => {
                           </Link>
                           {item.report_url && (
                             <a
-                              href={item.report_url}
+                              href={resolveMediaUrl(item.report_url)}
                               target="_blank"
                               rel="noreferrer"
                               className="p-1.5 rounded-lg bg-cyan-500/15 hover:bg-cyan-500/25 text-cyan-400 border border-cyan-500/30 transition-colors shadow-xs"

@@ -1,10 +1,11 @@
 import React from 'react';
-import { HardDrive, CheckCircle2, Sliders, Info, Activity, RefreshCw, WifiOff } from 'lucide-react';
+import { HardDrive, CheckCircle2, Sliders, Info, Activity, RefreshCw, WifiOff, CloudOff } from 'lucide-react';
 import { useBackendStatus } from '../context/BackendStatusContext';
-import { getEndpointDisplayUrl } from '../services/api';
+import { getEndpointDisplayUrl, isRemoteBackendConfigured } from '../services/api';
 
 export const Settings: React.FC = () => {
   const { isOnline, isChecking, latencyMs, lastChecked, checkHealth } = useBackendStatus();
+  const isRemote = isRemoteBackendConfigured();
 
   return (
     <div className="space-y-6 max-w-4xl mx-auto animate-fadeIn">
@@ -67,15 +68,21 @@ export const Settings: React.FC = () => {
 
         {!isOnline && (
           <div className="bg-rose-500/10 border border-rose-500/30 rounded-2xl p-4 text-xs text-rose-200 flex items-start space-x-3">
-            <WifiOff className="w-4 h-4 text-rose-400 shrink-0 mt-0.5" />
+            {isRemote ? <CloudOff className="w-4 h-4 text-rose-400 shrink-0 mt-0.5" /> : <WifiOff className="w-4 h-4 text-rose-400 shrink-0 mt-0.5" />}
             <div>
               <p className="font-bold text-white">Backend Offline Warning</p>
-              <p className="text-rose-300 mt-0.5">
-                The Python server is not responding on port 8000. Launch it from your terminal:
-                <code className="block mt-1.5 font-mono text-[11px] text-cyan-300 bg-slate-950 px-3 py-1.5 rounded-xl border border-slate-800 select-all">
-                  python -m uvicorn backend.app.main:app --host 127.0.0.1 --port 8000
-                </code>
-              </p>
+              {isRemote ? (
+                <p className="text-rose-300 mt-0.5">
+                  The configured cloud inference server at <code className="text-cyan-300 font-mono">{getEndpointDisplayUrl()}</code> is not responding. Ensure your deployed backend service is running and active.
+                </p>
+              ) : (
+                <p className="text-rose-300 mt-0.5">
+                  The Python server is not responding on port 8000. Launch it from your terminal:
+                  <code className="block mt-1.5 font-mono text-[11px] text-cyan-300 bg-slate-950 px-3 py-1.5 rounded-xl border border-slate-800 select-all">
+                    python -m uvicorn backend.app.main:app --host 127.0.0.1 --port 8000
+                  </code>
+                </p>
+              )}
             </div>
           </div>
         )}

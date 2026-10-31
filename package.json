@@ -1,0 +1,12 @@
+{
+  "name": "temporal-spectral-neural-facial-forensics",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Temporal-Spectral Multimodal Deepfake and Synthetic Media Forensics Platform",
+  "scripts": {
+    "build": "cd frontend && npm install && npm run build",
+    "dev": "cd frontend && npm run dev",
+    "preview": "cd frontend && npm run preview"
+  }
+}
+

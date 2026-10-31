@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { ChevronLeft, ChevronRight, Sliders, Layers, Eye } from 'lucide-react';
 import type { HeatmapItem } from '../types/analysis';
+import { resolveMediaUrl } from '../services/api';
 
 interface HeatmapViewerProps {
   heatmaps: HeatmapItem[];
@@ -56,7 +57,7 @@ export const HeatmapViewer: React.FC<HeatmapViewerProps> = ({ heatmaps }) => {
         {/* Heatmap Image Canvas */}
         <div className="relative rounded-2xl overflow-hidden border border-slate-800 bg-black aspect-square max-w-sm mx-auto shadow-2xl">
           <img
-            src={current.image_url}
+            src={resolveMediaUrl(current.image_url)}
             alt={`Grad-CAM frame ${current.frame}`}
             className="w-full h-full object-cover transition-opacity duration-200"
             style={{ opacity: opacity }}

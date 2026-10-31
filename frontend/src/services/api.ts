@@ -12,6 +12,27 @@ export const getEndpointDisplayUrl = (): string => {
   return 'http://127.0.0.1:8000/api/v1';
 };
 
+export const isRemoteBackendConfigured = (): boolean => {
+  return Boolean(rawEnvUrl);
+};
+
+export const resolveMediaUrl = (url?: string | null): string => {
+  if (!url) return '';
+  if (
+    url.startsWith('http://') ||
+    url.startsWith('https://') ||
+    url.startsWith('blob:') ||
+    url.startsWith('data:')
+  ) {
+    return url;
+  }
+  if (rawEnvUrl) {
+    const cleanUrl = url.startsWith('/') ? url : `/${url}`;
+    return `${rawEnvUrl}${cleanUrl}`;
+  }
+  return url;
+};
+
 const apiClient = axios.create({
   baseURL: API_BASE_URL,
   timeout: 60000,

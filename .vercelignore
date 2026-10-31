@@ -1,0 +1,29 @@
+# Exclude heavy backend ML code, models, and data from Vercel web deployment
+backend/
+checkpoints/
+data/
+dataset/
+paper_figures/
+reports/
+training/
+tests/
+scripts/
+*.py
+*.pyc
+__pycache__/
+.venv/
+venv/
+env/
+*.pt
+*.pth
+*.onnx
+*.safetensors
+*.bin
+
+# System & Git
+.git/
+.github/
+.vscode/
+.idea/
+*.log
+

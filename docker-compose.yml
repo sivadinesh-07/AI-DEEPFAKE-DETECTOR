@@ -1,0 +1,21 @@
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: neural-forensics-backend
+    restart: unless-stopped
+    ports:
+      - "8000:8000"
+    environment:
+      - PYTHONUNBUFFERED=1
+    volumes:
+      - forensics_data:/app/data
+      - forensics_results:/app/backend/results
+      - forensics_uploads:/app/backend/uploads
+
+volumes:
+  forensics_data:
+  forensics_results:
+  forensics_uploads:
+

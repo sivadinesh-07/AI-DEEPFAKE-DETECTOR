@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { AlertCircle, CheckCircle2, Film, Eye, X, ZoomIn, Clock } from 'lucide-react';
 import type { FrameItem } from '../types/analysis';
+import { resolveMediaUrl } from '../services/api';
 
 interface FrameGalleryProps {
   frames: FrameItem[];
@@ -83,7 +84,7 @@ export const FrameGallery: React.FC<FrameGalleryProps> = ({ frames, suspiciousFr
                 {/* Image Thumbnail */}
                 <div className="aspect-square relative overflow-hidden bg-black">
                   <img
-                    src={f.frame_url}
+                    src={resolveMediaUrl(f.frame_url)}
                     alt={`Frame ${f.frame}`}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                   />
@@ -172,7 +173,7 @@ export const FrameGallery: React.FC<FrameGalleryProps> = ({ frames, suspiciousFr
                 <p className="text-xs font-semibold text-slate-300">Aligned Canonical Facial Crop (224x224)</p>
                 <div className="aspect-square rounded-2xl overflow-hidden border border-slate-800 bg-black shadow-inner">
                   <img
-                    src={selectedFrame.frame_url}
+                    src={resolveMediaUrl(selectedFrame.frame_url)}
                     alt={`Frame ${selectedFrame.frame}`}
                     className="w-full h-full object-cover"
                   />
@@ -184,7 +185,7 @@ export const FrameGallery: React.FC<FrameGalleryProps> = ({ frames, suspiciousFr
                 <div className="aspect-square rounded-2xl overflow-hidden border border-slate-800 bg-black shadow-inner flex items-center justify-center">
                   {selectedFrame.heatmap_url ? (
                     <img
-                      src={selectedFrame.heatmap_url}
+                      src={resolveMediaUrl(selectedFrame.heatmap_url)}
                       alt={`Heatmap ${selectedFrame.frame}`}
                       className="w-full h-full object-cover"
                     />

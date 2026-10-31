@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import { WifiOff, RefreshCw, Copy, Check, Terminal, ChevronDown, ChevronUp, AlertOctagon } from 'lucide-react';
+import { WifiOff, RefreshCw, Copy, Check, Terminal, ChevronDown, ChevronUp, AlertOctagon, CloudOff } from 'lucide-react';
 import { useBackendStatus } from '../context/BackendStatusContext';
-import { getEndpointDisplayUrl } from '../services/api';
+import { getEndpointDisplayUrl, isRemoteBackendConfigured } from '../services/api';
 
 export const OfflineBanner: React.FC = () => {
   const { isOnline, isChecking, checkHealth } = useBackendStatus();
@@ -12,6 +12,7 @@ export const OfflineBanner: React.FC = () => {
     return null;
   }
 
+  const isRemote = isRemoteBackendConfigured();
   const startCmd = 'python -m uvicorn backend.app.main:app --host 127.0.0.1 --port 8000';
 
   const handleCopy = () => {
@@ -30,7 +31,7 @@ export const OfflineBanner: React.FC = () => {
         {/* Left Info */}
         <div className="flex items-start sm:items-center space-x-3.5">
           <div className="p-2 bg-rose-500/15 border border-rose-500/30 rounded-xl text-rose-400 shrink-0 mt-0.5 sm:mt-0 shadow-[0_0_15px_rgba(244,63,94,0.15)]">
-            <WifiOff className="w-4 h-4 animate-pulse text-rose-400" />
+            {isRemote ? <CloudOff className="w-4 h-4 animate-pulse text-rose-400" /> : <WifiOff className="w-4 h-4 animate-pulse text-rose-400" />}
           </div>
           <div>
             <div className="flex items-center space-x-2">
@@ -39,12 +40,16 @@ export const OfflineBanner: React.FC = () => {
                 Backend Inference Server Disconnected
               </span>
               <span className="bg-rose-500/20 text-rose-300 text-[10px] uppercase tracking-wider font-mono font-semibold px-2 py-0.5 rounded-full border border-rose-500/30">
-                Port 8000 Inactive
+                {isRemote ? 'Remote Server Offline' : 'Port 8000 Inactive'}
               </span>
             </div>
             {!minimized && (
               <p className="text-[11px] text-slate-300 mt-0.5 max-w-2xl leading-relaxed font-sans">
-                The FastAPI inference backend at <code className="bg-slate-900 px-1.5 py-0.5 rounded text-cyan-300 font-mono text-[10px] border border-slate-700">{getEndpointDisplayUrl()}</code> is currently unreachable. Start it to process video audits and generate Grad-CAM dossiers.
+                {isRemote ? (
+                  <>The cloud inference backend at <code className="bg-slate-900 px-1.5 py-0.5 rounded text-cyan-300 font-mono text-[10px] border border-slate-700">{getEndpointDisplayUrl()}</code> is currently unreachable. Ensure your backend instance (Render/Railway/Docker) is running.</>
+                ) : (
+                  <>The FastAPI inference backend at <code className="bg-slate-900 px-1.5 py-0.5 rounded text-cyan-300 font-mono text-[10px] border border-slate-700">{getEndpointDisplayUrl()}</code> is currently unreachable. Start it to process video audits and generate Grad-CAM dossiers.</>
+                )}
               </p>
             )}
           </div>
@@ -52,7 +57,7 @@ export const OfflineBanner: React.FC = () => {
 
         {/* Right Actions & Command */}
         <div className="flex items-center space-x-2.5 self-stretch sm:self-auto justify-end">
-          {!minimized && (
+          {!minimized && !isRemote && (
             <div className="hidden lg:flex items-center space-x-2 bg-slate-900 border border-slate-800 px-3 py-1.5 rounded-xl text-xs font-mono text-slate-300 shadow-inner">
               <Terminal className="w-3.5 h-3.5 text-cyan-400" />
               <span className="truncate max-w-[280px] text-[11px] text-slate-300">{startCmd}</span>
